@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import records from "../../../data/psi/investigations.json";
+import records from "./investigations.json";
 
 type Sourced = { value: unknown; source_url: string; locator: string | null; quote: string };
 

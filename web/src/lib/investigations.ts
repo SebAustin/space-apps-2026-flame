@@ -1,4 +1,4 @@
-import raw from "../../../data/psi/investigations.json";
+import raw from "../data/investigations.json";
 import atmospheres from "../data/atmospheres.json";
 import type { Range, Tested, TestPoint } from "./match";
 

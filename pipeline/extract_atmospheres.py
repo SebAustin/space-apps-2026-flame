@@ -21,6 +21,9 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 TABLES = ROOT / "data" / "raw" / "tables"
 OUT = ROOT / "web" / "src" / "data" / "atmospheres.json"
+# The app is deployed from web/, so it reads its own copy of the PSI metadata.
+METADATA = ROOT / "data" / "psi" / "investigations.json"
+METADATA_COPY = ROOT / "web" / "src" / "data" / "investigations.json"
 
 PSIA_PER = {"psia": 1.0, "atm": 14.6959, "bar": 14.5038, "mmHg": 14.6959 / 760.0}
 
@@ -178,6 +181,7 @@ if __name__ == "__main__":
     result = extract_all()
     OUT.parent.mkdir(parents=True, exist_ok=True)
     OUT.write_text(json.dumps(result, indent=2) + "\n")
+    METADATA_COPY.write_bytes(METADATA.read_bytes())
     for acc, r in result.items():
         print(acc, r["o2_pct"] and (r["o2_pct"]["min"], r["o2_pct"]["max"]),
               r["pressure_psia"] and (r["pressure_psia"]["min"], r["pressure_psia"]["max"]))
