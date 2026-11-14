@@ -1,17 +1,22 @@
 import raw from "../data/investigations.json";
 import atmospheres from "../data/atmospheres.json";
-import type { Range, Tested, TestPoint } from "./match";
+import type { Balance, Range, Tested, TestPoint } from "./match";
 
 type Sourced = { value: unknown; source_url: string; locator: string | null; quote: string } | null;
 type RawRecord = Record<string, Sourced> & { challenge_name: string; scope: string };
 
-type Extracted = {
-  min: number;
-  max: number;
-  n_values: number;
-  source_file: string;
-  source_column: string;
-} | null;
+export type Extracted =
+  | { basis: "table"; min: number; max: number; n_values: number; source_file: string; source_column: string }
+  | { basis: "description"; min: number; max: number; source_url: string; locator: string; quote: string }
+  | null;
+
+export type Note = {
+  quantity: "o2" | "pressure";
+  kind: "conflict";
+  statements: { source_url: string; locator: string; quote: string }[];
+};
+
+type Point = TestPoint & { balance: Balance; source_file: string };
 
 export type Investigation = Tested & {
   name: string;
@@ -21,7 +26,8 @@ export type Investigation = Tested & {
   doiUrl: string | null;
   o2Source: Extracted;
   pressureSource: Extracted;
-  tests: (TestPoint & { source_file: string })[];
+  tests: Point[];
+  notes: Note[];
 };
 
 const text = (s: Sourced) => (s && typeof s.value === "string" ? s.value : null);
@@ -40,9 +46,9 @@ export function loadInvestigations(): Investigation[] {
       continue;
     }
     const atm = (
-      atmospheres as Record<
+      atmospheres as unknown as Record<
         string,
-        { o2_pct: Extracted; pressure_psia: Extracted; tests: (TestPoint & { source_file: string })[] }
+        { o2_pct: Extracted; pressure_psia: Extracted; tests: Point[]; notes: Note[] }
       >
     )[id];
     const doi = text(r.doi);
@@ -58,6 +64,7 @@ export function loadInvestigations(): Investigation[] {
       o2Source: atm?.o2_pct ?? null,
       pressureSource: atm?.pressure_psia ?? null,
       tests: atm?.tests ?? [],
+      notes: atm?.notes ?? [],
     });
   }
   return [...byId.values()];

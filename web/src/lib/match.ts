@@ -46,6 +46,25 @@ export function nearestTest<P extends TestPoint>(tests: P[], target: Target): Ne
   return best;
 }
 
+export type Balance = "N2" | "other" | "unknown";
+
+/**
+ * Nearest single test in a habitat-like atmosphere: oxygen balanced by nitrogen.
+ * Tests with CO2 or helium are left out and counted; tests whose balance gas the
+ * table does not state are used only when no nitrogen-balanced test exists.
+ */
+export function nearestAirTest<P extends TestPoint & { balance: Balance }>(
+  tests: P[],
+  target: Target,
+): { nearest: Nearest<P>; balance: "N2" | "unknown"; excludedOther: number } | null {
+  const excludedOther = tests.filter((t) => t.balance === "other").length;
+  for (const balance of ["N2", "unknown"] as const) {
+    const nearest = nearestTest(tests.filter((t) => t.balance === balance), target);
+    if (nearest) return { nearest, balance, excludedOther };
+  }
+  return null;
+}
+
 /** Does a tested range include the target? If not, how far is its nearest edge? */
 export function dimensionMatch(target: number, range: Range | null): DimensionMatch {
   if (range === null) return { status: "unknown", gap: null };

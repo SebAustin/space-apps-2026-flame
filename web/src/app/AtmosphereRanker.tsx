@@ -3,22 +3,25 @@
 import { useMemo, useState } from "react";
 import { HABITATS } from "@/lib/habitats";
 import type { Investigation } from "@/lib/investigations";
-import { nearestTest, rankByAtmosphere, type DimensionMatch, type Nearest } from "@/lib/match";
+import { nearestAirTest, rankByAtmosphere, type DimensionMatch } from "@/lib/match";
 
 const fmt = (n: number) => (Number.isInteger(n) ? String(n) : n.toFixed(1));
 const signed = (n: number) => `${n >= 0 ? "+" : "−"}${fmt(Math.abs(n))}`;
 
 type Point = Investigation["tests"][number];
+type AirMatch = ReturnType<typeof nearestAirTest<Point>>;
 
-function NearestTest({ nearest, hasTests }: { nearest: Nearest<Point> | null; hasTests: boolean }) {
-  if (!hasTests || nearest === null) {
+function NearestTest({ match, hasTests }: { match: AirMatch; hasTests: boolean }) {
+  if (!hasTests || match === null) {
     return (
       <p className="nearest nearest-none">
-        Exact combination not checkable: the PSI table does not give O₂ and pressure for each single test.
+        {hasTests
+          ? "No single test in an oxygen–nitrogen atmosphere: every test in this table used CO₂ or helium."
+          : "Exact combination not checkable: the PSI table does not give O₂ and pressure for each single test."}
       </p>
     );
   }
-  const { test, o2Diff, pressureDiff } = nearest;
+  const { test, o2Diff, pressureDiff } = match.nearest;
   return (
     <p className="nearest">
       <span className="nearest-label">Nearest single test</span>{" "}
@@ -26,8 +29,41 @@ function NearestTest({ nearest, hasTests }: { nearest: Nearest<Point> | null; ha
       <span className="nearest-diff">
         ({signed(o2Diff)} pts O₂, {signed(pressureDiff)} psia)
       </span>
-      <span className="range-source">{test.source_file}</span>
+      <span className="range-source">
+        {match.balance === "N2"
+          ? "Oxygen–nitrogen atmosphere"
+          : "Balance gas not stated in the PSI table"}
+        {match.excludedOther > 0 &&
+          ` · ${match.excludedOther} tests in CO₂ or helium atmospheres left out`}
+        {" · "}
+        {test.source_file}
+      </span>
     </p>
+  );
+}
+
+function Conflicts({ notes }: { notes: Investigation["notes"] }) {
+  if (notes.length === 0) return null;
+  return (
+    <>
+      {notes.map((n) => (
+        <div key={n.quantity} className="conflict">
+          <span className="nearest-label">
+            {n.quantity === "pressure" ? "Pressure" : "O₂"}: PSI description contradicts itself, not ranked
+          </span>
+          <ul>
+            {n.statements.map((st) => (
+              <li key={st.locator}>
+                <a href={st.source_url} target="_blank" rel="noreferrer">
+                  {st.locator}
+                </a>
+                : <q>{st.quote}</q>
+              </li>
+            ))}
+          </ul>
+        </div>
+      ))}
+    </>
   );
 }
 
@@ -56,9 +92,18 @@ function RangeCell({
         {source ? `${fmt(source.min)}–${fmt(source.max)} ${unit}` : "—"}
       </div>
       <Badge match={match} unit={unit} />
-      {source && (
+      {source?.basis === "table" && (
         <div className="range-source" title={`Column: ${source.source_column}`}>
           {source.source_file}
+        </div>
+      )}
+      {source?.basis === "description" && (
+        <div className="range-source">
+          Stated in the PSI description, not the experimental table:{" "}
+          <a href={source.source_url} target="_blank" rel="noreferrer">
+            {source.locator}
+          </a>{" "}
+          <q>{source.quote}</q>
         </div>
       )}
     </div>
@@ -88,12 +133,12 @@ export default function AtmosphereRanker({ investigations }: { investigations: I
     const target = { o2_pct: o2Num, pressure_psia: pNum };
     // Same range match: an investigation with an actual nearby test comes first.
     return rankByAtmosphere(investigations, target)
-      .map((inv) => ({ ...inv, nearest: nearestTest(inv.tests, target) }))
+      .map((inv) => ({ ...inv, air: nearestAirTest(inv.tests, target) }))
       .sort(
         (a, b) =>
           a.unknownCount - b.unknownCount ||
           a.relativeGap - b.relativeGap ||
-          (a.nearest?.relativeDistance ?? Infinity) - (b.nearest?.relativeDistance ?? Infinity),
+          (a.air?.nearest.relativeDistance ?? Infinity) - (b.air?.nearest.relativeDistance ?? Infinity),
       );
   }, [investigations, valid, o2Num, pNum]);
 
@@ -137,6 +182,7 @@ export default function AtmosphereRanker({ investigations }: { investigations: I
               </a>
               {" — "}
               <q>{habitat.source.quote}</q>
+              {habitat.note && <span className="atmo-note">{habitat.note}</span>}
             </>
           ) : habitat.source ? (
             "Custom values entered."
@@ -162,8 +208,9 @@ export default function AtmosphereRanker({ investigations }: { investigations: I
                   <RangeCell label="Pressure tested" unit="psia" match={inv.pressure} source={inv.pressureSource} />
                 </div>
                 {inv.o2.status !== "unknown" && inv.pressure.status !== "unknown" && (
-                  <NearestTest nearest={inv.nearest} hasTests={inv.tests.length > 0} />
+                  <NearestTest match={inv.air} hasTests={inv.tests.length > 0} />
                 )}
+                <Conflicts notes={inv.notes} />
                 {inv.objective && typeof inv.objective.value === "string" && (
                   <details>
                     <summary>Objective</summary>

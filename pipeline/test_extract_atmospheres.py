@@ -81,3 +81,31 @@ def test_records_without_atmosphere_columns_stay_unknown():
     out = extract_all(TABLES)
     assert out["PSI-26"]["o2_pct"] is None
     assert out["PSI-26"]["pressure_psia"] is None
+
+
+@pytest.mark.skipif(not TABLES.exists(), reason="raw PSI tables not downloaded")
+def test_each_test_records_its_balance_gas():
+    out = extract_all(TABLES)
+    flex = {t["test"]: t for t in out["PSI-69"]["tests"]}
+    assert flex["FLEX #41, 219F001"]["balance"] == "N2"
+    balances = {t["balance"] for t in out["PSI-69"]["tests"]}
+    assert balances == {"N2", "other"}  # FLEX also ran CO2 and helium atmospheres
+    assert {t["balance"] for t in out["PSI-10"]["tests"]} == {"unknown"}  # table states no diluent
+
+
+@pytest.mark.skipif(not TABLES.exists(), reason="raw PSI tables not downloaded")
+def test_bre_pressure_comes_from_its_description_when_the_table_has_none():
+    bre = extract_all(TABLES)["PSI-20"]
+    assert (bre["pressure_psia"]["min"], bre["pressure_psia"]["max"]) == (8.2, 14.7)
+    assert bre["pressure_psia"]["basis"] == "description"
+    assert "will be examined" in bre["pressure_psia"]["quote"]
+    assert bre["o2_pct"]["basis"] == "table"  # table values win when both exist
+
+
+@pytest.mark.skipif(not TABLES.exists(), reason="raw PSI tables not downloaded")
+def test_contradictory_descriptions_are_shown_not_ranked():
+    cfi = extract_all(TABLES)["PSI-39"]
+    assert cfi["pressure_psia"] is None
+    [note] = cfi["notes"]
+    assert note["quantity"] == "pressure" and note["kind"] == "conflict"
+    assert len(note["statements"]) == 2

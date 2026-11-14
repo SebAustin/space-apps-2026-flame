@@ -1,5 +1,31 @@
 import { describe, expect, it } from "vitest";
-import { dimensionMatch, nearestTest, rankByAtmosphere, type Tested } from "./match";
+import { dimensionMatch, nearestAirTest, nearestTest, rankByAtmosphere, type Tested } from "./match";
+
+describe("nearestAirTest", () => {
+  const target = { o2_pct: 30, pressure_psia: 10.2 };
+  const pt = (test: string, o2_pct: number, pressure_psia: number, balance: "N2" | "other" | "unknown") => ({
+    test,
+    o2_pct,
+    pressure_psia,
+    balance,
+  });
+
+  it("ignores CO2 and helium tests even when they are closer, and counts them", () => {
+    const r = nearestAirTest([pt("helium", 30, 10.2, "other"), pt("air", 29, 10.4, "N2")], target)!;
+    expect(r.nearest.test.test).toBe("air");
+    expect(r.balance).toBe("N2");
+    expect(r.excludedOther).toBe(1);
+  });
+
+  it("falls back to tests whose balance gas is not stated, and says so", () => {
+    const r = nearestAirTest([pt("unstated", 30, 10.2, "unknown")], target)!;
+    expect(r.balance).toBe("unknown");
+  });
+
+  it("is null when only non-air tests exist", () => {
+    expect(nearestAirTest([pt("helium", 30, 10.2, "other")], target)).toBeNull();
+  });
+});
 
 describe("nearestTest", () => {
   const target = { o2_pct: 30, pressure_psia: 10.2 };

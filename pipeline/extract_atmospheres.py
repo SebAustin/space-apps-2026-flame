@@ -6,6 +6,10 @@ O2 (percent by volume) and pressure (psia) found in its table, with the file and
 column each range came from. A record whose table has no such column gets null,
 never a guess.
 
+Where a table has no such column, a value stated in the record's PSI description is used
+and marked as such; a description that contradicts itself is reported, not ranked.
+Each single test also records its balance gas (N2, other, or unknown).
+
 Inverse flames (oxygen flowing out of the burner into a fuel atmosphere) are
 skipped for O2: their O2 column describes the burner stream, not the ambient.
 
@@ -48,14 +52,34 @@ COLUMNS = [
 ]
 
 # Tables with one row per test and both values on that row:
-# (accession, file, test-id columns, O2 column, O2 unit, pressure column, pressure unit).
+# (accession, file, test-id columns, O2 column, O2 unit, pressure column, pressure unit,
+#  columns of non-nitrogen diluents, or None when the table states no diluent).
 PER_TEST = [
     ("PSI-69", "PSI-69_Experimental table_FLEX.csv", ("FLEX Test #", "FLEX Identifier"),
-     "O initial ambient composition; mole fraction", "fraction", "Ambient pressure; mmHg", "mmHg"),
+     "O initial ambient composition; mole fraction", "fraction", "Ambient pressure; mmHg", "mmHg",
+     ("CO initial ambient composition; mole fraction", "He initial ambient composition; mole fraction")),
     ("PSI-10", "PSI-10_Experimental table_Flame Design_Normal Flame.csv", ("Test",),
-     "XO2 (init)", "fraction", "pmean (atm)", "atm"),
+     "XO2 (init)", "fraction", "pmean (atm)", "atm", None),
     ("PSI-159", "PSI-159_Experimental table_CFI-G_Normal Flames.csv", ("Test",),
-     " XO2 before test", "fraction", "approx p (bar)", "bar"),
+     " XO2 before test", "fraction", "approx p (bar)", "bar", None),
+]
+
+PSI_API = "https://psi.nasa.gov/geode-py/ws/repo/investigations/"
+
+# Values stated in a PSI record's description (not its table), used only when the
+# table has no such column. Quotes are verbatim from the record's objective.
+STATED = [
+    ("PSI-20", "pressure", [14.7, 10.2, 8.2], "objective",
+     "NASA - considered atmosphere for human space missions will be examined: 14.7 psia, 21 % oxygen: "
+     "10.2 psia, 26.5 %; and 8.2 psia, 34 % oxygen."),
+]
+
+# Descriptions that contradict themselves: shown on the page, never ranked.
+CONFLICTS = [
+    ("PSI-39", "pressure", [
+        ("objective", "at pressures ranging from 0.25 atm to 5 atm"),
+        ("approach", "delivers the desired gas mixture to the combustion chamber ranging from 0.25 to 0.5 atm"),
+    ]),
 ]
 
 ALL_RECORDS = [
@@ -124,10 +148,10 @@ def extract_all(tables: Path = TABLES) -> dict:
             found[acc][quantity].append((fname, column, vals))
 
     tests = {acc: [] for acc in ALL_RECORDS}
-    for acc, fname, id_cols, o2_col, o2_unit, p_col, p_unit in PER_TEST:
+    for acc, fname, id_cols, o2_col, o2_unit, p_col, p_unit, diluents in PER_TEST:
         path = tables / fname
         if path.exists():
-            tests[acc].extend(per_test_points(path, id_cols, o2_col, o2_unit, p_col, p_unit))
+            tests[acc].extend(per_test_points(path, id_cols, o2_col, o2_unit, p_col, p_unit, diluents))
 
     out = {}
     for acc, q in found.items():
@@ -135,11 +159,39 @@ def extract_all(tables: Path = TABLES) -> dict:
             "o2_pct": summarize(q["o2"]),
             "pressure_psia": summarize(q["pressure"]),
             "tests": tests[acc],
+            "notes": [],
         }
+    for acc, quantity, values, locator, quote in STATED:
+        key = "o2_pct" if quantity == "o2" else "pressure_psia"
+        if out[acc][key] is None:
+            out[acc][key] = {
+                "min": min(values),
+                "max": max(values),
+                "basis": "description",
+                "source_url": PSI_API + acc,
+                "locator": locator,
+                "quote": quote,
+            }
+    for acc, quantity, statements in CONFLICTS:
+        out[acc]["notes"].append({
+            "quantity": quantity,
+            "kind": "conflict",
+            "statements": [
+                {"source_url": PSI_API + acc, "locator": loc, "quote": q} for loc, q in statements
+            ],
+        })
     return out
 
 
-def per_test_points(path: Path, id_cols, o2_col, o2_unit, p_col, p_unit) -> list[dict]:
+def balance_gas(row: dict, diluents) -> str:
+    """ "N2" when the row lists no other diluent, "other" for CO2/He, "unknown" if not stated."""
+    if diluents is None:
+        return "unknown"
+    other = [v for c in diluents for v in parse_numbers(row.get(c, ""))]
+    return "other" if any(v > 0 for v in other) else "N2"
+
+
+def per_test_points(path: Path, id_cols, o2_col, o2_unit, p_col, p_unit, diluents=None) -> list[dict]:
     """One point per table row that states a single O2 and a single pressure."""
     points = []
     for row in read_rows(path):
@@ -159,6 +211,7 @@ def per_test_points(path: Path, id_cols, o2_col, o2_unit, p_col, p_unit) -> list
             "test": label,
             "o2_pct": round(o2_pct, 2),
             "pressure_psia": round(p_psia, 2),
+            "balance": balance_gas(row, diluents),
             "source_file": path.name,
         })
     return points
@@ -174,6 +227,7 @@ def summarize(parts: list) -> dict | None:
         "n_values": len(vals),
         "source_file": "; ".join(sorted({f for f, _, _ in parts})),
         "source_column": "; ".join(sorted({c.strip() for _, c, _ in parts})),
+        "basis": "table",
     }
 
 

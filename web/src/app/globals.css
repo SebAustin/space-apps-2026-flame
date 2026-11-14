@@ -318,3 +318,21 @@ details p {
 .nearest .range-source {
   display: block;
 }
+
+.atmo-note {
+  display: block;
+  margin-top: 0.4rem;
+}
+
+.conflict {
+  font-size: 0.85rem;
+  border-left: 3px solid var(--gap);
+  padding: 0.2rem 0 0.2rem 0.7rem;
+  margin-bottom: 0.7rem;
+}
+
+.conflict ul {
+  margin: 0.3rem 0 0;
+  padding-left: 1rem;
+  list-style: disc;
+}
