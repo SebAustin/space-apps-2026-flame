@@ -289,3 +289,32 @@ details p {
   .habitat-btn { transition: none; }
   .habitat-btn:hover { transform: none; }
 }
+
+.nearest {
+  font-size: 0.9rem;
+  border-left: 3px solid var(--flame);
+  padding: 0.2rem 0 0.2rem 0.7rem;
+  margin-bottom: 0.7rem;
+}
+
+.nearest-none {
+  border-left-color: var(--rule);
+  color: var(--ink-soft);
+}
+
+.nearest-label {
+  font-family: var(--font-plex-mono), monospace;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--ink-soft);
+}
+
+.nearest-diff {
+  font-family: var(--font-plex-mono), monospace;
+  color: var(--ink-soft);
+}
+
+.nearest .range-source {
+  display: block;
+}

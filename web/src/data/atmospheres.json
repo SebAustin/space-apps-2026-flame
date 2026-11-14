@@ -1,7 +1,8 @@
 {
   "PSI-26": {
     "o2_pct": null,
-    "pressure_psia": null
+    "pressure_psia": null,
+    "tests": []
   },
   "PSI-25": {
     "o2_pct": {
@@ -11,7 +12,8 @@
       "source_file": "PSI-25_Experimental table_BASS-II.csv",
       "source_column": "Calibrated  initial O2 % by vol"
     },
-    "pressure_psia": null
+    "pressure_psia": null,
+    "tests": []
   },
   "PSI-98": {
     "o2_pct": {
@@ -21,7 +23,8 @@
       "source_file": "PSI-98_Experimental table_SAFFIRE-1.csv",
       "source_column": "Percent O2"
     },
-    "pressure_psia": null
+    "pressure_psia": null,
+    "tests": []
   },
   "PSI-99": {
     "o2_pct": {
@@ -31,23 +34,28 @@
       "source_file": "PSI-99_Experimental table_SAFFIRE-2.csv",
       "source_column": "Percent O2 (Note 1)"
     },
-    "pressure_psia": null
+    "pressure_psia": null,
+    "tests": []
   },
   "PSI-100": {
     "o2_pct": null,
-    "pressure_psia": null
+    "pressure_psia": null,
+    "tests": []
   },
   "PSI-102": {
     "o2_pct": null,
-    "pressure_psia": null
+    "pressure_psia": null,
+    "tests": []
   },
   "PSI-101": {
     "o2_pct": null,
-    "pressure_psia": null
+    "pressure_psia": null,
+    "tests": []
   },
   "PSI-47": {
     "o2_pct": null,
-    "pressure_psia": null
+    "pressure_psia": null,
+    "tests": []
   },
   "PSI-69": {
     "o2_pct": {
@@ -63,7 +71,1647 @@
       "n_values": 273,
       "source_file": "PSI-69_Experimental table_FLEX.csv",
       "source_column": "Ambient pressure; mmHg"
-    }
+    },
+    "tests": [
+      {
+        "test": "FLEX #1, 20CAL08",
+        "o2_pct": 21.0,
+        "pressure_psia": 14.65,
+        "source_file": "PSI-69_Experimental table_FLEX.csv"
+      },
+      {
+        "test": "FLEX #2, 20CAL10",
+        "o2_pct": 21.0,
+        "pressure_psia": 14.73,
+        "source_file": "PSI-69_Experimental table_FLEX.csv"
+      },
+      {
+        "test": "FLEX #3, 20CAL12",
+        "o2_pct": 21.0,
+        "pressure_psia": 14.78,
+        "source_file": "PSI-69_Experimental table_FLEX.csv"
+      },
+      {
+        "test": "FLEX #4, 30CAL02",
+        "o2_pct": 21.0,
+        "pressure_psia": 14.7,
+        "source_file": "PSI-69_Experimental table_FLEX.csv"
+      },
+      {
+        "test": "FLEX #5, 30CAL03",
+        "o2_pct": 21.0,
+        "pressure_psia": 14.7,
+        "source_file": "PSI-69_Experimental table_FLEX.csv"
+      },
+      {
+        "test": "FLEX #6, 40CAL01",
+        "o2_pct": 21.0,
+        "pressure_psia": 14.7,
+        "source_file": "PSI-69_Experimental table_FLEX.csv"
+      },
+      {
+        "test": "FLEX #7, 20CAL13",
+        "o2_pct": 21.0,
+        "pressure_psia": 14.72,
+        "source_file": "PSI-69_Experimental table_FLEX.csv"
+      },
+      {
+        "test": "FLEX #8, 30CAL06",
+        "o2_pct": 21.0,
+        "pressure_psia": 14.74,
+        "source_file": "PSI-69_Experimental table_FLEX.csv"
+      },
+      {
+        "test": "FLEX #9, 30CAL07",
+        "o2_pct": 21.0,
+        "pressure_psia": 14.7,
+        "source_file": "PSI-69_Experimental table_FLEX.csv"
+      },
+      {
+        "test": "FLEX #10, 256F002",
+        "o2_pct": 21.0,
+        "pressure_psia": 44.86,
+        "source_file": "PSI-69_Experimental table_FLEX.csv"
+      },
+      {
+        "test": "FLEX #11, 256R001",
+        "o2_pct": 21.0,
+        "pressure_psia": 44.84,
+        "source_file": "PSI-69_Experimental table_FLEX.csv"
+      },
+      {
+        "test": "FLEX #12, 264F003",
+        "o2_pct": 21.0,
+        "pressure_psia": 44.86,
+        "source_file": "PSI-69_Experimental table_FLEX.csv"
+      },
+      {
+        "test": "FLEX #13, 256R002",
+        "o2_pct": 21.0,
+        "pressure_psia": 40.11,
+        "source_file": "PSI-69_Experimental table_FLEX.csv"
+      },
+      {
+        "test": "FLEX #14, 256F007",
+        "o2_pct": 21.0,
+        "pressure_psia": 39.75,
+        "source_file": "PSI-69_Experimental table_FLEX.csv"
+      },
+      {
+        "test": "FLEX #15, 256F008",
+        "o2_pct": 21.0,
+        "pressure_psia": 39.96,
+        "source_file": "PSI-69_Experimental table_FLEX.csv"
+      },
+      {
+        "test": "FLEX #16, 256F009",
+        "o2_pct": 21.0,
+        "pressure_psia": 40.07,
+        "source_file": "PSI-69_Experimental table_FLEX.csv"
+      },
+      {
+        "test": "FLEX #17, 240R003",
+        "o2_pct": 21.0,
+        "pressure_psia": 29.89,
+        "source_file": "PSI-69_Experimental table_FLEX.csv"
+      },
+      {
+        "test": "FLEX #18, 248F001",
+        "o2_pct": 21.0,
+        "pressure_psia": 30.05,
+        "source_file": "PSI-69_Experimental table_FLEX.csv"
+      },
+      {
+        "test": "FLEX #19, 196F001",
+        "o2_pct": 34.0,
+        "pressure_psia": 10.42,
+        "source_file": "PSI-69_Experimental table_FLEX.csv"
+      },
+      {
+        "test": "FLEX #20, 192F001",
+        "o2_pct": 34.0,
+        "pressure_psia": 10.43,
+        "source_file": "PSI-69_Experimental table_FLEX.csv"
+      },
+      {
+        "test": "FLEX #21, 192F002",
+        "o2_pct": 34.0,
+        "pressure_psia": 10.45,
+        "source_file": "PSI-69_Experimental table_FLEX.csv"
+      },
+      {
+        "test": "FLEX #22, 192F003",
+        "o2_pct": 34.0,
+        "pressure_psia": 10.45,
+        "source_file": "PSI-69_Experimental table_FLEX.csv"
+      },
+      {
+        "test": "FLEX #23, 196F002",
+        "o2_pct": 34.0,
+        "pressure_psia": 10.48,
+        "source_file": "PSI-69_Experimental table_FLEX.csv"
+      },
+      {
+        "test": "FLEX #24, 196F003",
+        "o2_pct": 34.0,
+        "pressure_psia": 10.5,
+        "source_file": "PSI-69_Experimental table_FLEX.csv"
+      },
+      {
+        "test": "FLEX #25, 191R001",
+        "o2_pct": 30.0,
+        "pressure_psia": 10.39,
+        "source_file": "PSI-69_Experimental table_FLEX.csv"
+      },
+      {
+        "test": "FLEX #26, 191F001",
+        "o2_pct": 30.0,
+        "pressure_psia": 10.41,
+        "source_file": "PSI-69_Experimental table_FLEX.csv"
+      },
+      {
+        "test": "FLEX #27, 195F001",
+        "o2_pct": 30.0,
+        "pressure_psia": 10.46,
+        "source_file": "PSI-69_Experimental table_FLEX.csv"
+      },
+      {
+        "test": "FLEX #28, 195F002",
+        "o2_pct": 30.0,
+        "pressure_psia": 10.44,
+        "source_file": "PSI-69_Experimental table_FLEX.csv"
+      },
+      {
+        "test": "FLEX #29, 178R001",
+        "o2_pct": 30.0,
+        "pressure_psia": 14.83,
+        "source_file": "PSI-69_Experimental table_FLEX.csv"
+      },
+      {
+        "test": "FLEX #30, 178F001",
+        "o2_pct": 30.0,
+        "pressure_psia": 14.87,
+        "source_file": "PSI-69_Experimental table_FLEX.csv"
+      },
+      {
+        "test": "FLEX #31, 182F001",
+        "o2_pct": 30.0,
+        "pressure_psia": 14.9,
+        "source_file": "PSI-69_Experimental table_FLEX.csv"
+      },
+      {
+        "test": "FLEX #32, 182F002",
+        "o2_pct": 30.0,
+        "pressure_psia": 14.91,
+        "source_file": "PSI-69_Experimental table_FLEX.csv"
+      },
+      {
+        "test": "FLEX #33, 177R002",
+        "o2_pct": 21.0,
+        "pressure_psia": 14.78,
+        "source_file": "PSI-69_Experimental table_FLEX.csv"
+      },
+      {
+        "test": "FLEX #34, 177F001",
+        "o2_pct": 21.0,
+        "pressure_psia": 14.84,
+        "source_file": "PSI-69_Experimental table_FLEX.csv"
+      },
+      {
+        "test": "FLEX #35, 181F001",
+        "o2_pct": 21.0,
+        "pressure_psia": 14.85,
+        "source_file": "PSI-69_Experimental table_FLEX.csv"
+      },
+      {
+        "test": "FLEX #36, 190R002",
+        "o2_pct": 20.0,
+        "pressure_psia": 10.42,
+        "source_file": "PSI-69_Experimental table_FLEX.csv"
+      },
+      {
+        "test": "FLEX #37, 220R001",
+        "o2_pct": 34.0,
+        "pressure_psia": 10.33,
+        "source_file": "PSI-69_Experimental table_FLEX.csv"
+      },
+      {
+        "test": "FLEX #38, 220R002",
+        "o2_pct": 34.0,
+        "pressure_psia": 10.33,
+        "source_file": "PSI-69_Experimental table_FLEX.csv"
+      },
+      {
+        "test": "FLEX #39, 224F001",
+        "o2_pct": 34.0,
+        "pressure_psia": 10.34,
+        "source_file": "PSI-69_Experimental table_FLEX.csv"
+      },
+      {
+        "test": "FLEX #40, 219R001",
+        "o2_pct": 30.0,
+        "pressure_psia": 10.35,
+        "source_file": "PSI-69_Experimental table_FLEX.csv"
+      },
+      {
+        "test": "FLEX #41, 219F001",
+        "o2_pct": 30.0,
+        "pressure_psia": 10.33,
+        "source_file": "PSI-69_Experimental table_FLEX.csv"
+      },
+      {
+        "test": "FLEX #42, 223F001",
+        "o2_pct": 30.0,
+        "pressure_psia": 10.35,
+        "source_file": "PSI-69_Experimental table_FLEX.csv"
+      },
+      {
+        "test": "FLEX #43, 223F002",
+        "o2_pct": 30.0,
+        "pressure_psia": 10.34,
+        "source_file": "PSI-69_Experimental table_FLEX.csv"
+      },
+      {
+        "test": "FLEX #44, 206F001",
+        "o2_pct": 30.0,
+        "pressure_psia": 14.83,
+        "source_file": "PSI-69_Experimental table_FLEX.csv"
+      },
+      {
+        "test": "FLEX #45, 206R001",
+        "o2_pct": 30.0,
+        "pressure_psia": 14.86,
+        "source_file": "PSI-69_Experimental table_FLEX.csv"
+      },
+      {
+        "test": "FLEX #46, 205R001",
+        "o2_pct": 21.0,
+        "pressure_psia": 14.88,
+        "source_file": "PSI-69_Experimental table_FLEX.csv"
+      },
+      {
+        "test": "FLEX #47, 209F001",
+        "o2_pct": 21.0,
+        "pressure_psia": 14.89,
+        "source_file": "PSI-69_Experimental table_FLEX.csv"
+      },
+      {
+        "test": "FLEX #48, 205F001",
+        "o2_pct": 21.0,
+        "pressure_psia": 14.86,
+        "source_file": "PSI-69_Experimental table_FLEX.csv"
+      },
+      {
+        "test": "FLEX #49, 209F003",
+        "o2_pct": 21.0,
+        "pressure_psia": 14.79,
+        "source_file": "PSI-69_Experimental table_FLEX.csv"
+      },
+      {
+        "test": "FLEX #50, 209F004",
+        "o2_pct": 21.0,
+        "pressure_psia": 14.89,
+        "source_file": "PSI-69_Experimental table_FLEX.csv"
+      },
+      {
+        "test": "FLEX #51, 209F005",
+        "o2_pct": 21.0,
+        "pressure_psia": 14.92,
+        "source_file": "PSI-69_Experimental table_FLEX.csv"
+      },
+      {
+        "test": "FLEX #52, 210F002",
+        "o2_pct": 30.0,
+        "pressure_psia": 14.91,
+        "source_file": "PSI-69_Experimental table_FLEX.csv"
+      },
+      {
+        "test": "FLEX #53, 209F002",
+        "o2_pct": 21.0,
+        "pressure_psia": 14.89,
+        "source_file": "PSI-69_Experimental table_FLEX.csv"
+      },
+      {
+        "test": "FLEX #54, 190F003",
+        "o2_pct": 20.0,
+        "pressure_psia": 10.47,
+        "source_file": "PSI-69_Experimental table_FLEX.csv"
+      },
+      {
+        "test": "FLEX #55, 218F001",
+        "o2_pct": 20.0,
+        "pressure_psia": 10.49,
+        "source_file": "PSI-69_Experimental table_FLEX.csv"
+      },
+      {
+        "test": "FLEX #56, 194F001",
+        "o2_pct": 20.0,
+        "pressure_psia": 10.52,
+        "source_file": "PSI-69_Experimental table_FLEX.csv"
+      },
+      {
+        "test": "FLEX #57, 303F001",
+        "o2_pct": 20.0,
+        "pressure_psia": 10.53,
+        "source_file": "PSI-69_Experimental table_FLEX.csv"
+      },
+      {
+        "test": "FLEX #58, 176F001",
+        "o2_pct": 18.0,
+        "pressure_psia": 14.95,
+        "source_file": "PSI-69_Experimental table_FLEX.csv"
+      },
+      {
+        "test": "FLEX #59, 176R001",
+        "o2_pct": 18.0,
+        "pressure_psia": 14.87,
+        "source_file": "PSI-69_Experimental table_FLEX.csv"
+      },
+      {
+        "test": "FLEX #60, 204F001",
+        "o2_pct": 18.0,
+        "pressure_psia": 14.96,
+        "source_file": "PSI-69_Experimental table_FLEX.csv"
+      },
+      {
+        "test": "FLEX #61, 204R001",
+        "o2_pct": 18.0,
+        "pressure_psia": 14.97,
+        "source_file": "PSI-69_Experimental table_FLEX.csv"
+      },
+      {
+        "test": "FLEX #62, 301F001",
+        "o2_pct": 18.0,
+        "pressure_psia": 14.73,
+        "source_file": "PSI-69_Experimental table_FLEX.csv"
+      },
+      {
+        "test": "FLEX #63, 301F002",
+        "o2_pct": 18.0,
+        "pressure_psia": 14.84,
+        "source_file": "PSI-69_Experimental table_FLEX.csv"
+      },
+      {
+        "test": "FLEX #64, 302F001",
+        "o2_pct": 18.0,
+        "pressure_psia": 14.78,
+        "source_file": "PSI-69_Experimental table_FLEX.csv"
+      },
+      {
+        "test": "FLEX #65, 189R001",
+        "o2_pct": 15.0,
+        "pressure_psia": 14.81,
+        "source_file": "PSI-69_Experimental table_FLEX.csv"
+      },
+      {
+        "test": "FLEX #66, 189F001",
+        "o2_pct": 15.0,
+        "pressure_psia": 14.83,
+        "source_file": "PSI-69_Experimental table_FLEX.csv"
+      },
+      {
+        "test": "FLEX #67, 189F002",
+        "o2_pct": 15.0,
+        "pressure_psia": 14.84,
+        "source_file": "PSI-69_Experimental table_FLEX.csv"
+      },
+      {
+        "test": "FLEX #68, 189R003",
+        "o2_pct": 15.0,
+        "pressure_psia": 14.87,
+        "source_file": "PSI-69_Experimental table_FLEX.csv"
+      },
+      {
+        "test": "FLEX #69, 193R002",
+        "o2_pct": 14.0,
+        "pressure_psia": 14.83,
+        "source_file": "PSI-69_Experimental table_FLEX.csv"
+      },
+      {
+        "test": "FLEX #70, 193F001",
+        "o2_pct": 15.0,
+        "pressure_psia": 14.72,
+        "source_file": "PSI-69_Experimental table_FLEX.csv"
+      },
+      {
+        "test": "FLEX #71, 189R002",
+        "o2_pct": 15.0,
+        "pressure_psia": 14.86,
+        "source_file": "PSI-69_Experimental table_FLEX.csv"
+      },
+      {
+        "test": "FLEX #72, 193R001",
+        "o2_pct": 15.0,
+        "pressure_psia": 14.8,
+        "source_file": "PSI-69_Experimental table_FLEX.csv"
+      },
+      {
+        "test": "FLEX #73, 193F001",
+        "o2_pct": 15.0,
+        "pressure_psia": 14.72,
+        "source_file": "PSI-69_Experimental table_FLEX.csv"
+      },
+      {
+        "test": "FLEX #74, 221F001",
+        "o2_pct": 15.0,
+        "pressure_psia": 14.81,
+        "source_file": "PSI-69_Experimental table_FLEX.csv"
+      },
+      {
+        "test": "FLEX #75, 203R002",
+        "o2_pct": 13.0,
+        "pressure_psia": 14.9,
+        "source_file": "PSI-69_Experimental table_FLEX.csv"
+      },
+      {
+        "test": "FLEX #76, 203F001",
+        "o2_pct": 13.0,
+        "pressure_psia": 14.88,
+        "source_file": "PSI-69_Experimental table_FLEX.csv"
+      },
+      {
+        "test": "FLEX #77, 175R001",
+        "o2_pct": 14.0,
+        "pressure_psia": 14.86,
+        "source_file": "PSI-69_Experimental table_FLEX.csv"
+      },
+      {
+        "test": "FLEX #78, 175F001",
+        "o2_pct": 14.0,
+        "pressure_psia": 14.81,
+        "source_file": "PSI-69_Experimental table_FLEX.csv"
+      },
+      {
+        "test": "FLEX #79, 179F001",
+        "o2_pct": 13.0,
+        "pressure_psia": 14.85,
+        "source_file": "PSI-69_Experimental table_FLEX.csv"
+      },
+      {
+        "test": "FLEX #80, 207F001",
+        "o2_pct": 13.0,
+        "pressure_psia": 14.89,
+        "source_file": "PSI-69_Experimental table_FLEX.csv"
+      },
+      {
+        "test": "FLEX #81, 207F002",
+        "o2_pct": 13.0,
+        "pressure_psia": 14.89,
+        "source_file": "PSI-69_Experimental table_FLEX.csv"
+      },
+      {
+        "test": "FLEX #82, 304F001",
+        "o2_pct": 13.0,
+        "pressure_psia": 14.78,
+        "source_file": "PSI-69_Experimental table_FLEX.csv"
+      },
+      {
+        "test": "FLEX #83, 304F002",
+        "o2_pct": 12.0,
+        "pressure_psia": 14.93,
+        "source_file": "PSI-69_Experimental table_FLEX.csv"
+      },
+      {
+        "test": "FLEX #84, 304R001",
+        "o2_pct": 12.0,
+        "pressure_psia": 14.84,
+        "source_file": "PSI-69_Experimental table_FLEX.csv"
+      },
+      {
+        "test": "FLEX #85, 304R002",
+        "o2_pct": 12.0,
+        "pressure_psia": 14.91,
+        "source_file": "PSI-69_Experimental table_FLEX.csv"
+      },
+      {
+        "test": "FLEX #86, 305F002",
+        "o2_pct": 12.0,
+        "pressure_psia": 14.89,
+        "source_file": "PSI-69_Experimental table_FLEX.csv"
+      },
+      {
+        "test": "FLEX #87, 305F003",
+        "o2_pct": 12.0,
+        "pressure_psia": 14.91,
+        "source_file": "PSI-69_Experimental table_FLEX.csv"
+      },
+      {
+        "test": "FLEX #88, 053R001",
+        "o2_pct": 25.0,
+        "pressure_psia": 10.39,
+        "source_file": "PSI-69_Experimental table_FLEX.csv"
+      },
+      {
+        "test": "FLEX #89, 053F001",
+        "o2_pct": 25.0,
+        "pressure_psia": 10.39,
+        "source_file": "PSI-69_Experimental table_FLEX.csv"
+      },
+      {
+        "test": "FLEX #90, 141R001",
+        "o2_pct": 25.0,
+        "pressure_psia": 10.43,
+        "source_file": "PSI-69_Experimental table_FLEX.csv"
+      },
+      {
+        "test": "FLEX #91, 141F001",
+        "o2_pct": 25.0,
+        "pressure_psia": 10.41,
+        "source_file": "PSI-69_Experimental table_FLEX.csv"
+      },
+      {
+        "test": "FLEX #92, 061F002",
+        "o2_pct": 25.0,
+        "pressure_psia": 10.37,
+        "source_file": "PSI-69_Experimental table_FLEX.csv"
+      },
+      {
+        "test": "FLEX #93, 149F001",
+        "o2_pct": 25.0,
+        "pressure_psia": 10.39,
+        "source_file": "PSI-69_Experimental table_FLEX.csv"
+      },
+      {
+        "test": "FLEX #94, C08H101",
+        "o2_pct": 24.0,
+        "pressure_psia": 10.32,
+        "source_file": "PSI-69_Experimental table_FLEX.csv"
+      },
+      {
+        "test": "FLEX #95, C08H201",
+        "o2_pct": 24.0,
+        "pressure_psia": 10.33,
+        "source_file": "PSI-69_Experimental table_FLEX.csv"
+      },
+      {
+        "test": "FLEX #96, C08H301",
+        "o2_pct": 24.0,
+        "pressure_psia": 10.33,
+        "source_file": "PSI-69_Experimental table_FLEX.csv"
+      },
+      {
+        "test": "FLEX #97, C08M101",
+        "o2_pct": 23.0,
+        "pressure_psia": 10.33,
+        "source_file": "PSI-69_Experimental table_FLEX.csv"
+      },
+      {
+        "test": "FLEX #98, C09M201",
+        "o2_pct": 23.0,
+        "pressure_psia": 10.39,
+        "source_file": "PSI-69_Experimental table_FLEX.csv"
+      },
+      {
+        "test": "FLEX #99, C09M101",
+        "o2_pct": 23.0,
+        "pressure_psia": 10.35,
+        "source_file": "PSI-69_Experimental table_FLEX.csv"
+      },
+      {
+        "test": "FLEX #100, C09H101",
+        "o2_pct": 23.0,
+        "pressure_psia": 10.38,
+        "source_file": "PSI-69_Experimental table_FLEX.csv"
+      },
+      {
+        "test": "FLEX #101, C09H201",
+        "o2_pct": 23.0,
+        "pressure_psia": 10.42,
+        "source_file": "PSI-69_Experimental table_FLEX.csv"
+      },
+      {
+        "test": "FLEX #102, C10H101",
+        "o2_pct": 21.0,
+        "pressure_psia": 10.33,
+        "source_file": "PSI-69_Experimental table_FLEX.csv"
+      },
+      {
+        "test": "FLEX #103, C10H201",
+        "o2_pct": 21.0,
+        "pressure_psia": 10.33,
+        "source_file": "PSI-69_Experimental table_FLEX.csv"
+      },
+      {
+        "test": "FLEX #104, C08M201",
+        "o2_pct": 23.0,
+        "pressure_psia": 10.33,
+        "source_file": "PSI-69_Experimental table_FLEX.csv"
+      },
+      {
+        "test": "FLEX #105, C08M301",
+        "o2_pct": 23.0,
+        "pressure_psia": 10.34,
+        "source_file": "PSI-69_Experimental table_FLEX.csv"
+      },
+      {
+        "test": "FLEX #106, C09M401",
+        "o2_pct": 23.0,
+        "pressure_psia": 10.41,
+        "source_file": "PSI-69_Experimental table_FLEX.csv"
+      },
+      {
+        "test": "FLEX #107, C08M401",
+        "o2_pct": 23.0,
+        "pressure_psia": 10.35,
+        "source_file": "PSI-69_Experimental table_FLEX.csv"
+      },
+      {
+        "test": "FLEX #108, C09M301",
+        "o2_pct": 23.0,
+        "pressure_psia": 10.41,
+        "source_file": "PSI-69_Experimental table_FLEX.csv"
+      },
+      {
+        "test": "FLEX #109, C10M102",
+        "o2_pct": 21.0,
+        "pressure_psia": 10.37,
+        "source_file": "PSI-69_Experimental table_FLEX.csv"
+      },
+      {
+        "test": "FLEX #110, C10M201",
+        "o2_pct": 21.0,
+        "pressure_psia": 10.38,
+        "source_file": "PSI-69_Experimental table_FLEX.csv"
+      },
+      {
+        "test": "FLEX #111, C10M303",
+        "o2_pct": 21.0,
+        "pressure_psia": 10.38,
+        "source_file": "PSI-69_Experimental table_FLEX.csv"
+      },
+      {
+        "test": "FLEX #112, C10M401",
+        "o2_pct": 21.0,
+        "pressure_psia": 10.26,
+        "source_file": "PSI-69_Experimental table_FLEX.csv"
+      },
+      {
+        "test": "FLEX #113, C11M101",
+        "o2_pct": 20.0,
+        "pressure_psia": 10.34,
+        "source_file": "PSI-69_Experimental table_FLEX.csv"
+      },
+      {
+        "test": "FLEX #115, C11M301",
+        "o2_pct": 20.0,
+        "pressure_psia": 10.36,
+        "source_file": "PSI-69_Experimental table_FLEX.csv"
+      },
+      {
+        "test": "FLEX #116, C11M401",
+        "o2_pct": 20.0,
+        "pressure_psia": 10.37,
+        "source_file": "PSI-69_Experimental table_FLEX.csv"
+      },
+      {
+        "test": "FLEX #117, C11H101",
+        "o2_pct": 20.0,
+        "pressure_psia": 10.27,
+        "source_file": "PSI-69_Experimental table_FLEX.csv"
+      },
+      {
+        "test": "FLEX #118, C11H201",
+        "o2_pct": 20.0,
+        "pressure_psia": 10.3,
+        "source_file": "PSI-69_Experimental table_FLEX.csv"
+      },
+      {
+        "test": "FLEX #119, C12H103",
+        "o2_pct": 18.0,
+        "pressure_psia": 10.3,
+        "source_file": "PSI-69_Experimental table_FLEX.csv"
+      },
+      {
+        "test": "FLEX #120, C12H201",
+        "o2_pct": 18.0,
+        "pressure_psia": 10.3,
+        "source_file": "PSI-69_Experimental table_FLEX.csv"
+      },
+      {
+        "test": "FLEX #121, C12M101",
+        "o2_pct": 18.0,
+        "pressure_psia": 10.18,
+        "source_file": "PSI-69_Experimental table_FLEX.csv"
+      },
+      {
+        "test": "FLEX #122, C12M201",
+        "o2_pct": 18.0,
+        "pressure_psia": 10.27,
+        "source_file": "PSI-69_Experimental table_FLEX.csv"
+      },
+      {
+        "test": "FLEX #123, C12M301",
+        "o2_pct": 18.0,
+        "pressure_psia": 10.29,
+        "source_file": "PSI-69_Experimental table_FLEX.csv"
+      },
+      {
+        "test": "FLEX #124, C12M401",
+        "o2_pct": 18.0,
+        "pressure_psia": 10.29,
+        "source_file": "PSI-69_Experimental table_FLEX.csv"
+      },
+      {
+        "test": "FLEX #125, C13M103",
+        "o2_pct": 17.0,
+        "pressure_psia": 10.39,
+        "source_file": "PSI-69_Experimental table_FLEX.csv"
+      },
+      {
+        "test": "FLEX #126, C13M201",
+        "o2_pct": 17.0,
+        "pressure_psia": 10.37,
+        "source_file": "PSI-69_Experimental table_FLEX.csv"
+      },
+      {
+        "test": "FLEX #127, C13M301",
+        "o2_pct": 17.0,
+        "pressure_psia": 10.38,
+        "source_file": "PSI-69_Experimental table_FLEX.csv"
+      },
+      {
+        "test": "FLEX #128, C13M401",
+        "o2_pct": 17.0,
+        "pressure_psia": 10.39,
+        "source_file": "PSI-69_Experimental table_FLEX.csv"
+      },
+      {
+        "test": "FLEX #129, C13H102",
+        "o2_pct": 17.0,
+        "pressure_psia": 10.37,
+        "source_file": "PSI-69_Experimental table_FLEX.csv"
+      },
+      {
+        "test": "FLEX #130, C13H201",
+        "o2_pct": 17.0,
+        "pressure_psia": 10.39,
+        "source_file": "PSI-69_Experimental table_FLEX.csv"
+      },
+      {
+        "test": "FLEX #131, C21H101",
+        "o2_pct": 24.0,
+        "pressure_psia": 14.77,
+        "source_file": "PSI-69_Experimental table_FLEX.csv"
+      },
+      {
+        "test": "FLEX #132, C21H201",
+        "o2_pct": 24.0,
+        "pressure_psia": 14.8,
+        "source_file": "PSI-69_Experimental table_FLEX.csv"
+      },
+      {
+        "test": "FLEX #133, C21H301",
+        "o2_pct": 24.0,
+        "pressure_psia": 14.83,
+        "source_file": "PSI-69_Experimental table_FLEX.csv"
+      },
+      {
+        "test": "FLEX #134, C21H401",
+        "o2_pct": 24.0,
+        "pressure_psia": 14.84,
+        "source_file": "PSI-69_Experimental table_FLEX.csv"
+      },
+      {
+        "test": "FLEX #135, C21H501",
+        "o2_pct": 24.0,
+        "pressure_psia": 14.85,
+        "source_file": "PSI-69_Experimental table_FLEX.csv"
+      },
+      {
+        "test": "FLEX #136, C21H302",
+        "o2_pct": 24.0,
+        "pressure_psia": 14.85,
+        "source_file": "PSI-69_Experimental table_FLEX.csv"
+      },
+      {
+        "test": "FLEX #137, C21H303",
+        "o2_pct": 24.0,
+        "pressure_psia": 14.85,
+        "source_file": "PSI-69_Experimental table_FLEX.csv"
+      },
+      {
+        "test": "FLEX #138, C21H304",
+        "o2_pct": 24.0,
+        "pressure_psia": 14.86,
+        "source_file": "PSI-69_Experimental table_FLEX.csv"
+      },
+      {
+        "test": "FLEX #139, C21H305",
+        "o2_pct": 24.0,
+        "pressure_psia": 14.85,
+        "source_file": "PSI-69_Experimental table_FLEX.csv"
+      },
+      {
+        "test": "FLEX #140, C14M101",
+        "o2_pct": 15.0,
+        "pressure_psia": 10.32,
+        "source_file": "PSI-69_Experimental table_FLEX.csv"
+      },
+      {
+        "test": "FLEX #141, C14M201",
+        "o2_pct": 15.0,
+        "pressure_psia": 10.33,
+        "source_file": "PSI-69_Experimental table_FLEX.csv"
+      },
+      {
+        "test": "FLEX #142, C14M301",
+        "o2_pct": 15.0,
+        "pressure_psia": 10.34,
+        "source_file": "PSI-69_Experimental table_FLEX.csv"
+      },
+      {
+        "test": "FLEX #143, C14M302",
+        "o2_pct": 15.0,
+        "pressure_psia": 10.34,
+        "source_file": "PSI-69_Experimental table_FLEX.csv"
+      },
+      {
+        "test": "FLEX #144, C01M101",
+        "o2_pct": 20.0,
+        "pressure_psia": 14.73,
+        "source_file": "PSI-69_Experimental table_FLEX.csv"
+      },
+      {
+        "test": "FLEX #145, C01M201",
+        "o2_pct": 20.0,
+        "pressure_psia": 14.76,
+        "source_file": "PSI-69_Experimental table_FLEX.csv"
+      },
+      {
+        "test": "FLEX #146, C01M301",
+        "o2_pct": 20.0,
+        "pressure_psia": 14.8,
+        "source_file": "PSI-69_Experimental table_FLEX.csv"
+      },
+      {
+        "test": "FLEX #147, C13M102",
+        "o2_pct": 17.0,
+        "pressure_psia": 10.36,
+        "source_file": "PSI-69_Experimental table_FLEX.csv"
+      },
+      {
+        "test": "FLEX #148, C01H101",
+        "o2_pct": 20.0,
+        "pressure_psia": 14.78,
+        "source_file": "PSI-69_Experimental table_FLEX.csv"
+      },
+      {
+        "test": "FLEX #149, C01H201",
+        "o2_pct": 20.0,
+        "pressure_psia": 14.82,
+        "source_file": "PSI-69_Experimental table_FLEX.csv"
+      },
+      {
+        "test": "FLEX #150, C01H302",
+        "o2_pct": 20.0,
+        "pressure_psia": 14.84,
+        "source_file": "PSI-69_Experimental table_FLEX.csv"
+      },
+      {
+        "test": "FLEX #151, C03M101",
+        "o2_pct": 18.0,
+        "pressure_psia": 14.74,
+        "source_file": "PSI-69_Experimental table_FLEX.csv"
+      },
+      {
+        "test": "FLEX #152, C03M201",
+        "o2_pct": 18.0,
+        "pressure_psia": 14.79,
+        "source_file": "PSI-69_Experimental table_FLEX.csv"
+      },
+      {
+        "test": "FLEX #153, C03M301",
+        "o2_pct": 18.0,
+        "pressure_psia": 14.8,
+        "source_file": "PSI-69_Experimental table_FLEX.csv"
+      },
+      {
+        "test": "FLEX #154, C03H101",
+        "o2_pct": 18.0,
+        "pressure_psia": 14.74,
+        "source_file": "PSI-69_Experimental table_FLEX.csv"
+      },
+      {
+        "test": "FLEX #155, C03H201",
+        "o2_pct": 18.0,
+        "pressure_psia": 14.79,
+        "source_file": "PSI-69_Experimental table_FLEX.csv"
+      },
+      {
+        "test": "FLEX #156, C03H401",
+        "o2_pct": 18.0,
+        "pressure_psia": 14.81,
+        "source_file": "PSI-69_Experimental table_FLEX.csv"
+      },
+      {
+        "test": "FLEX #157, C05M101",
+        "o2_pct": 16.0,
+        "pressure_psia": 14.74,
+        "source_file": "PSI-69_Experimental table_FLEX.csv"
+      },
+      {
+        "test": "FLEX #158, C05M201",
+        "o2_pct": 16.0,
+        "pressure_psia": 14.78,
+        "source_file": "PSI-69_Experimental table_FLEX.csv"
+      },
+      {
+        "test": "FLEX #159, C05M301",
+        "o2_pct": 16.0,
+        "pressure_psia": 14.8,
+        "source_file": "PSI-69_Experimental table_FLEX.csv"
+      },
+      {
+        "test": "FLEX #160, C05M401",
+        "o2_pct": 16.0,
+        "pressure_psia": 14.84,
+        "source_file": "PSI-69_Experimental table_FLEX.csv"
+      },
+      {
+        "test": "FLEX #161, C06M101",
+        "o2_pct": 15.0,
+        "pressure_psia": 14.76,
+        "source_file": "PSI-69_Experimental table_FLEX.csv"
+      },
+      {
+        "test": "FLEX #162, C06M201",
+        "o2_pct": 15.0,
+        "pressure_psia": 14.78,
+        "source_file": "PSI-69_Experimental table_FLEX.csv"
+      },
+      {
+        "test": "FLEX #163, C06M301",
+        "o2_pct": 15.0,
+        "pressure_psia": 14.81,
+        "source_file": "PSI-69_Experimental table_FLEX.csv"
+      },
+      {
+        "test": "FLEX #164, C06M401",
+        "o2_pct": 15.0,
+        "pressure_psia": 14.81,
+        "source_file": "PSI-69_Experimental table_FLEX.csv"
+      },
+      {
+        "test": "FLEX #165, C03H302",
+        "o2_pct": 18.0,
+        "pressure_psia": 14.8,
+        "source_file": "PSI-69_Experimental table_FLEX.csv"
+      },
+      {
+        "test": "FLEX #166, C07M101",
+        "o2_pct": 14.0,
+        "pressure_psia": 14.71,
+        "source_file": "PSI-69_Experimental table_FLEX.csv"
+      },
+      {
+        "test": "FLEX #167, C07M201",
+        "o2_pct": 14.0,
+        "pressure_psia": 14.73,
+        "source_file": "PSI-69_Experimental table_FLEX.csv"
+      },
+      {
+        "test": "FLEX #168, C15M101",
+        "o2_pct": 21.0,
+        "pressure_psia": 14.76,
+        "source_file": "PSI-69_Experimental table_FLEX.csv"
+      },
+      {
+        "test": "FLEX #169, C15M201",
+        "o2_pct": 21.0,
+        "pressure_psia": 14.81,
+        "source_file": "PSI-69_Experimental table_FLEX.csv"
+      },
+      {
+        "test": "FLEX #170, C15M301",
+        "o2_pct": 21.0,
+        "pressure_psia": 14.83,
+        "source_file": "PSI-69_Experimental table_FLEX.csv"
+      },
+      {
+        "test": "FLEX #171, C03H501",
+        "o2_pct": 18.0,
+        "pressure_psia": 14.69,
+        "source_file": "PSI-69_Experimental table_FLEX.csv"
+      },
+      {
+        "test": "FLEX #172, C03H601",
+        "o2_pct": 18.0,
+        "pressure_psia": 14.73,
+        "source_file": "PSI-69_Experimental table_FLEX.csv"
+      },
+      {
+        "test": "FLEX #173, C03H701",
+        "o2_pct": 18.0,
+        "pressure_psia": 14.74,
+        "source_file": "PSI-69_Experimental table_FLEX.csv"
+      },
+      {
+        "test": "FLEX #174, C08H502",
+        "o2_pct": 24.0,
+        "pressure_psia": 10.28,
+        "source_file": "PSI-69_Experimental table_FLEX.csv"
+      },
+      {
+        "test": "FLEX #175, C08H601",
+        "o2_pct": 24.0,
+        "pressure_psia": 10.29,
+        "source_file": "PSI-69_Experimental table_FLEX.csv"
+      },
+      {
+        "test": "FLEX #176, C08M501",
+        "o2_pct": 24.0,
+        "pressure_psia": 10.38,
+        "source_file": "PSI-69_Experimental table_FLEX.csv"
+      },
+      {
+        "test": "FLEX #177, C08M601",
+        "o2_pct": 24.0,
+        "pressure_psia": 10.38,
+        "source_file": "PSI-69_Experimental table_FLEX.csv"
+      },
+      {
+        "test": "FLEX #178, C09H501",
+        "o2_pct": 23.0,
+        "pressure_psia": 10.32,
+        "source_file": "PSI-69_Experimental table_FLEX.csv"
+      },
+      {
+        "test": "FLEX #179, C09H601",
+        "o2_pct": 23.0,
+        "pressure_psia": 10.33,
+        "source_file": "PSI-69_Experimental table_FLEX.csv"
+      },
+      {
+        "test": "FLEX #180, C02H101",
+        "o2_pct": 19.0,
+        "pressure_psia": 14.66,
+        "source_file": "PSI-69_Experimental table_FLEX.csv"
+      },
+      {
+        "test": "FLEX #181, C02H201",
+        "o2_pct": 19.0,
+        "pressure_psia": 14.68,
+        "source_file": "PSI-69_Experimental table_FLEX.csv"
+      },
+      {
+        "test": "FLEX #182, C02H202",
+        "o2_pct": 19.0,
+        "pressure_psia": 14.68,
+        "source_file": "PSI-69_Experimental table_FLEX.csv"
+      },
+      {
+        "test": "FLEX #183, C09M501",
+        "o2_pct": 23.0,
+        "pressure_psia": 10.33,
+        "source_file": "PSI-69_Experimental table_FLEX.csv"
+      },
+      {
+        "test": "FLEX #184, C09M502",
+        "o2_pct": 23.0,
+        "pressure_psia": 10.35,
+        "source_file": "PSI-69_Experimental table_FLEX.csv"
+      },
+      {
+        "test": "FLEX #185, C09M601",
+        "o2_pct": 23.0,
+        "pressure_psia": 10.35,
+        "source_file": "PSI-69_Experimental table_FLEX.csv"
+      },
+      {
+        "test": "FLEX #186, C09M701",
+        "o2_pct": 23.0,
+        "pressure_psia": 10.37,
+        "source_file": "PSI-69_Experimental table_FLEX.csv"
+      },
+      {
+        "test": "FLEX #187, C02M101",
+        "o2_pct": 19.0,
+        "pressure_psia": 14.66,
+        "source_file": "PSI-69_Experimental table_FLEX.csv"
+      },
+      {
+        "test": "FLEX #188, C02M201",
+        "o2_pct": 19.0,
+        "pressure_psia": 14.66,
+        "source_file": "PSI-69_Experimental table_FLEX.csv"
+      },
+      {
+        "test": "FLEX #189, C03M501",
+        "o2_pct": 18.0,
+        "pressure_psia": 14.72,
+        "source_file": "PSI-69_Experimental table_FLEX.csv"
+      },
+      {
+        "test": "FLEX #190, C03M601",
+        "o2_pct": 18.0,
+        "pressure_psia": 14.78,
+        "source_file": "PSI-69_Experimental table_FLEX.csv"
+      },
+      {
+        "test": "FLEX #191, C03M701",
+        "o2_pct": 18.0,
+        "pressure_psia": 14.8,
+        "source_file": "PSI-69_Experimental table_FLEX.csv"
+      },
+      {
+        "test": "FLEX #192, C04M101",
+        "o2_pct": 17.0,
+        "pressure_psia": 14.69,
+        "source_file": "PSI-69_Experimental table_FLEX.csv"
+      },
+      {
+        "test": "FLEX #193, C04M201",
+        "o2_pct": 17.0,
+        "pressure_psia": 14.68,
+        "source_file": "PSI-69_Experimental table_FLEX.csv"
+      },
+      {
+        "test": "FLEX #194, C04H101",
+        "o2_pct": 17.0,
+        "pressure_psia": 14.54,
+        "source_file": "PSI-69_Experimental table_FLEX.csv"
+      },
+      {
+        "test": "FLEX #195, C04H201",
+        "o2_pct": 17.0,
+        "pressure_psia": 14.55,
+        "source_file": "PSI-69_Experimental table_FLEX.csv"
+      },
+      {
+        "test": "FLEX #196, C01H501",
+        "o2_pct": 20.0,
+        "pressure_psia": 14.66,
+        "source_file": "PSI-69_Experimental table_FLEX.csv"
+      },
+      {
+        "test": "FLEX #197, C01H601",
+        "o2_pct": 20.0,
+        "pressure_psia": 14.69,
+        "source_file": "PSI-69_Experimental table_FLEX.csv"
+      },
+      {
+        "test": "FLEX #198, C01H701",
+        "o2_pct": 20.0,
+        "pressure_psia": 14.7,
+        "source_file": "PSI-69_Experimental table_FLEX.csv"
+      },
+      {
+        "test": "FLEX #199, C01M501",
+        "o2_pct": 20.0,
+        "pressure_psia": 14.58,
+        "source_file": "PSI-69_Experimental table_FLEX.csv"
+      },
+      {
+        "test": "FLEX #200, C01M602",
+        "o2_pct": 20.0,
+        "pressure_psia": 14.62,
+        "source_file": "PSI-69_Experimental table_FLEX.csv"
+      },
+      {
+        "test": "FLEX #201, C01M603",
+        "o2_pct": 20.0,
+        "pressure_psia": 14.64,
+        "source_file": "PSI-69_Experimental table_FLEX.csv"
+      },
+      {
+        "test": "FLEX #202, N01M101",
+        "o2_pct": 21.0,
+        "pressure_psia": 14.7,
+        "source_file": "PSI-69_Experimental table_FLEX.csv"
+      },
+      {
+        "test": "FLEX #203, N01M201",
+        "o2_pct": 21.0,
+        "pressure_psia": 14.73,
+        "source_file": "PSI-69_Experimental table_FLEX.csv"
+      },
+      {
+        "test": "FLEX #204, N01H101",
+        "o2_pct": 21.0,
+        "pressure_psia": 14.63,
+        "source_file": "PSI-69_Experimental table_FLEX.csv"
+      },
+      {
+        "test": "FLEX #205, N01H102",
+        "o2_pct": 21.0,
+        "pressure_psia": 14.64,
+        "source_file": "PSI-69_Experimental table_FLEX.csv"
+      },
+      {
+        "test": "FLEX #206, N01H201",
+        "o2_pct": 21.0,
+        "pressure_psia": 14.7,
+        "source_file": "PSI-69_Experimental table_FLEX.csv"
+      },
+      {
+        "test": "FLEX #207, N01H202",
+        "o2_pct": 21.0,
+        "pressure_psia": 14.75,
+        "source_file": "PSI-69_Experimental table_FLEX.csv"
+      },
+      {
+        "test": "FLEX #208, N01H301",
+        "o2_pct": 21.0,
+        "pressure_psia": 14.75,
+        "source_file": "PSI-69_Experimental table_FLEX.csv"
+      },
+      {
+        "test": "FLEX #209, N02H101",
+        "o2_pct": 16.0,
+        "pressure_psia": 14.69,
+        "source_file": "PSI-69_Experimental table_FLEX.csv"
+      },
+      {
+        "test": "FLEX #210, N02H201",
+        "o2_pct": 16.0,
+        "pressure_psia": 14.69,
+        "source_file": "PSI-69_Experimental table_FLEX.csv"
+      },
+      {
+        "test": "FLEX #211, N02H203",
+        "o2_pct": 16.0,
+        "pressure_psia": 14.69,
+        "source_file": "PSI-69_Experimental table_FLEX.csv"
+      },
+      {
+        "test": "FLEX #212, N03H101",
+        "o2_pct": 15.0,
+        "pressure_psia": 14.77,
+        "source_file": "PSI-69_Experimental table_FLEX.csv"
+      },
+      {
+        "test": "FLEX #213, N04H101",
+        "o2_pct": 14.0,
+        "pressure_psia": 14.69,
+        "source_file": "PSI-69_Experimental table_FLEX.csv"
+      },
+      {
+        "test": "FLEX #214, N04H201",
+        "o2_pct": 14.0,
+        "pressure_psia": 14.69,
+        "source_file": "PSI-69_Experimental table_FLEX.csv"
+      },
+      {
+        "test": "FLEX #215, N04M101",
+        "o2_pct": 14.0,
+        "pressure_psia": 14.65,
+        "source_file": "PSI-69_Experimental table_FLEX.csv"
+      },
+      {
+        "test": "FLEX #216, N04M201",
+        "o2_pct": 14.0,
+        "pressure_psia": 14.66,
+        "source_file": "PSI-69_Experimental table_FLEX.csv"
+      },
+      {
+        "test": "FLEX #217, N05M101",
+        "o2_pct": 13.0,
+        "pressure_psia": 14.68,
+        "source_file": "PSI-69_Experimental table_FLEX.csv"
+      },
+      {
+        "test": "FLEX #218, N05M201",
+        "o2_pct": 13.0,
+        "pressure_psia": 14.71,
+        "source_file": "PSI-69_Experimental table_FLEX.csv"
+      },
+      {
+        "test": "FLEX #219, N06M101",
+        "o2_pct": 12.0,
+        "pressure_psia": 14.73,
+        "source_file": "PSI-69_Experimental table_FLEX.csv"
+      },
+      {
+        "test": "FLEX #220, N06M201",
+        "o2_pct": 12.0,
+        "pressure_psia": 14.73,
+        "source_file": "PSI-69_Experimental table_FLEX.csv"
+      },
+      {
+        "test": "FLEX #221, N06M202",
+        "o2_pct": 12.0,
+        "pressure_psia": 14.77,
+        "source_file": "PSI-69_Experimental table_FLEX.csv"
+      },
+      {
+        "test": "FLEX #222, H01M102",
+        "o2_pct": 20.0,
+        "pressure_psia": 14.68,
+        "source_file": "PSI-69_Experimental table_FLEX.csv"
+      },
+      {
+        "test": "FLEX #223, H01M104",
+        "o2_pct": 20.0,
+        "pressure_psia": 14.69,
+        "source_file": "PSI-69_Experimental table_FLEX.csv"
+      },
+      {
+        "test": "FLEX #224, H01H102",
+        "o2_pct": 20.0,
+        "pressure_psia": 14.61,
+        "source_file": "PSI-69_Experimental table_FLEX.csv"
+      },
+      {
+        "test": "FLEX #225, H02M101",
+        "o2_pct": 19.0,
+        "pressure_psia": 14.57,
+        "source_file": "PSI-69_Experimental table_FLEX.csv"
+      },
+      {
+        "test": "FLEX #226, H03M101",
+        "o2_pct": 18.0,
+        "pressure_psia": 14.68,
+        "source_file": "PSI-69_Experimental table_FLEX.csv"
+      },
+      {
+        "test": "FLEX #227, H03M201",
+        "o2_pct": 18.0,
+        "pressure_psia": 14.7,
+        "source_file": "PSI-69_Experimental table_FLEX.csv"
+      },
+      {
+        "test": "FLEX #228, N01H401",
+        "o2_pct": 21.0,
+        "pressure_psia": 14.84,
+        "source_file": "PSI-69_Experimental table_FLEX.csv"
+      },
+      {
+        "test": "FLEX #229, N01H502",
+        "o2_pct": 21.0,
+        "pressure_psia": 14.85,
+        "source_file": "PSI-69_Experimental table_FLEX.csv"
+      },
+      {
+        "test": "FLEX #230, N01H601",
+        "o2_pct": 21.0,
+        "pressure_psia": 14.87,
+        "source_file": "PSI-69_Experimental table_FLEX.csv"
+      },
+      {
+        "test": "FLEX #231, H02H101",
+        "o2_pct": 19.0,
+        "pressure_psia": 14.67,
+        "source_file": "PSI-69_Experimental table_FLEX.csv"
+      },
+      {
+        "test": "FLEX #232, H03H101",
+        "o2_pct": 18.0,
+        "pressure_psia": 14.77,
+        "source_file": "PSI-69_Experimental table_FLEX.csv"
+      },
+      {
+        "test": "FLEX #233, H03H201",
+        "o2_pct": 18.0,
+        "pressure_psia": 14.81,
+        "source_file": "PSI-69_Experimental table_FLEX.csv"
+      },
+      {
+        "test": "FLEX #234, H03H202",
+        "o2_pct": 18.0,
+        "pressure_psia": 14.82,
+        "source_file": "PSI-69_Experimental table_FLEX.csv"
+      },
+      {
+        "test": "FLEX #235, H04H101",
+        "o2_pct": 17.0,
+        "pressure_psia": 14.68,
+        "source_file": "PSI-69_Experimental table_FLEX.csv"
+      },
+      {
+        "test": "FLEX #236, H04H201",
+        "o2_pct": 17.0,
+        "pressure_psia": 14.68,
+        "source_file": "PSI-69_Experimental table_FLEX.csv"
+      },
+      {
+        "test": "FLEX #237, H04H302",
+        "o2_pct": 17.0,
+        "pressure_psia": 14.69,
+        "source_file": "PSI-69_Experimental table_FLEX.csv"
+      },
+      {
+        "test": "FLEX #238, H04H303",
+        "o2_pct": 17.0,
+        "pressure_psia": 14.69,
+        "source_file": "PSI-69_Experimental table_FLEX.csv"
+      },
+      {
+        "test": "FLEX #239, H04M101",
+        "o2_pct": 17.0,
+        "pressure_psia": 14.58,
+        "source_file": "PSI-69_Experimental table_FLEX.csv"
+      },
+      {
+        "test": "FLEX #240, H04M202",
+        "o2_pct": 17.0,
+        "pressure_psia": 14.64,
+        "source_file": "PSI-69_Experimental table_FLEX.csv"
+      },
+      {
+        "test": "FLEX #241, H05M102",
+        "o2_pct": 16.0,
+        "pressure_psia": 14.69,
+        "source_file": "PSI-69_Experimental table_FLEX.csv"
+      },
+      {
+        "test": "FLEX #242, H05M202",
+        "o2_pct": 16.0,
+        "pressure_psia": 14.72,
+        "source_file": "PSI-69_Experimental table_FLEX.csv"
+      },
+      {
+        "test": "FLEX #243, H05H103",
+        "o2_pct": 16.0,
+        "pressure_psia": 14.66,
+        "source_file": "PSI-69_Experimental table_FLEX.csv"
+      },
+      {
+        "test": "FLEX #244, H06M102",
+        "o2_pct": 15.0,
+        "pressure_psia": 14.61,
+        "source_file": "PSI-69_Experimental table_FLEX.csv"
+      },
+      {
+        "test": "FLEX #245, H06M201",
+        "o2_pct": 15.0,
+        "pressure_psia": 14.63,
+        "source_file": "PSI-69_Experimental table_FLEX.csv"
+      },
+      {
+        "test": "FLEX #246, H07M101",
+        "o2_pct": 14.0,
+        "pressure_psia": 14.68,
+        "source_file": "PSI-69_Experimental table_FLEX.csv"
+      },
+      {
+        "test": "FLEX #247, H07M202",
+        "o2_pct": 14.0,
+        "pressure_psia": 14.69,
+        "source_file": "PSI-69_Experimental table_FLEX.csv"
+      },
+      {
+        "test": "FLEX #248, H08M101",
+        "o2_pct": 13.0,
+        "pressure_psia": 14.76,
+        "source_file": "PSI-69_Experimental table_FLEX.csv"
+      },
+      {
+        "test": "FLEX #249, H10H101",
+        "o2_pct": 24.0,
+        "pressure_psia": 10.33,
+        "source_file": "PSI-69_Experimental table_FLEX.csv"
+      },
+      {
+        "test": "FLEX #250, H11H101",
+        "o2_pct": 23.0,
+        "pressure_psia": 10.29,
+        "source_file": "PSI-69_Experimental table_FLEX.csv"
+      },
+      {
+        "test": "FLEX #251, H10M101",
+        "o2_pct": 24.0,
+        "pressure_psia": 10.33,
+        "source_file": "PSI-69_Experimental table_FLEX.csv"
+      },
+      {
+        "test": "FLEX #252, H10M102",
+        "o2_pct": 24.0,
+        "pressure_psia": 10.34,
+        "source_file": "PSI-69_Experimental table_FLEX.csv"
+      },
+      {
+        "test": "FLEX #253, H11M101",
+        "o2_pct": 23.0,
+        "pressure_psia": 10.28,
+        "source_file": "PSI-69_Experimental table_FLEX.csv"
+      },
+      {
+        "test": "FLEX #254, H11M102",
+        "o2_pct": 23.0,
+        "pressure_psia": 10.28,
+        "source_file": "PSI-69_Experimental table_FLEX.csv"
+      },
+      {
+        "test": "FLEX #255, H12M101",
+        "o2_pct": 21.0,
+        "pressure_psia": 10.29,
+        "source_file": "PSI-69_Experimental table_FLEX.csv"
+      },
+      {
+        "test": "FLEX #256, H12M102",
+        "o2_pct": 21.0,
+        "pressure_psia": 10.27,
+        "source_file": "PSI-69_Experimental table_FLEX.csv"
+      },
+      {
+        "test": "FLEX #257, H12M201",
+        "o2_pct": 21.0,
+        "pressure_psia": 10.27,
+        "source_file": "PSI-69_Experimental table_FLEX.csv"
+      },
+      {
+        "test": "FLEX #258, H12H101",
+        "o2_pct": 21.0,
+        "pressure_psia": 10.24,
+        "source_file": "PSI-69_Experimental table_FLEX.csv"
+      },
+      {
+        "test": "FLEX #259, H12H201",
+        "o2_pct": 21.0,
+        "pressure_psia": 10.23,
+        "source_file": "PSI-69_Experimental table_FLEX.csv"
+      },
+      {
+        "test": "FLEX #260, H13H101",
+        "o2_pct": 20.0,
+        "pressure_psia": 10.3,
+        "source_file": "PSI-69_Experimental table_FLEX.csv"
+      },
+      {
+        "test": "FLEX #261, H13H201",
+        "o2_pct": 20.0,
+        "pressure_psia": 10.29,
+        "source_file": "PSI-69_Experimental table_FLEX.csv"
+      },
+      {
+        "test": "FLEX #262, H13M102",
+        "o2_pct": 20.0,
+        "pressure_psia": 10.2,
+        "source_file": "PSI-69_Experimental table_FLEX.csv"
+      },
+      {
+        "test": "FLEX #263, H13M201",
+        "o2_pct": 20.0,
+        "pressure_psia": 10.21,
+        "source_file": "PSI-69_Experimental table_FLEX.csv"
+      },
+      {
+        "test": "FLEX #264, H14M101",
+        "o2_pct": 18.0,
+        "pressure_psia": 10.29,
+        "source_file": "PSI-69_Experimental table_FLEX.csv"
+      },
+      {
+        "test": "FLEX #265, H14M201",
+        "o2_pct": 18.0,
+        "pressure_psia": 10.3,
+        "source_file": "PSI-69_Experimental table_FLEX.csv"
+      },
+      {
+        "test": "FLEX #266, H14M202",
+        "o2_pct": 18.0,
+        "pressure_psia": 10.31,
+        "source_file": "PSI-69_Experimental table_FLEX.csv"
+      },
+      {
+        "test": "FLEX #267, H14H101",
+        "o2_pct": 18.0,
+        "pressure_psia": 10.21,
+        "source_file": "PSI-69_Experimental table_FLEX.csv"
+      },
+      {
+        "test": "FLEX #268, H14H201",
+        "o2_pct": 18.0,
+        "pressure_psia": 10.25,
+        "source_file": "PSI-69_Experimental table_FLEX.csv"
+      },
+      {
+        "test": "FLEX #269, H15H101",
+        "o2_pct": 17.0,
+        "pressure_psia": 10.29,
+        "source_file": "PSI-69_Experimental table_FLEX.csv"
+      },
+      {
+        "test": "FLEX #270, H15H201",
+        "o2_pct": 17.0,
+        "pressure_psia": 10.3,
+        "source_file": "PSI-69_Experimental table_FLEX.csv"
+      },
+      {
+        "test": "FLEX #271, H15M102",
+        "o2_pct": 17.0,
+        "pressure_psia": 10.26,
+        "source_file": "PSI-69_Experimental table_FLEX.csv"
+      },
+      {
+        "test": "FLEX #272, H15M201",
+        "o2_pct": 17.0,
+        "pressure_psia": 10.28,
+        "source_file": "PSI-69_Experimental table_FLEX.csv"
+      },
+      {
+        "test": "FLEX #273, H19H101",
+        "o2_pct": 21.0,
+        "pressure_psia": 14.79,
+        "source_file": "PSI-69_Experimental table_FLEX.csv"
+      },
+      {
+        "test": "FLEX #274, H19H201",
+        "o2_pct": 21.0,
+        "pressure_psia": 14.82,
+        "source_file": "PSI-69_Experimental table_FLEX.csv"
+      }
+    ]
   },
   "PSI-68": {
     "o2_pct": {
@@ -79,11 +1727,13 @@
       "n_values": 40,
       "source_file": "PSI-68_Experimental table_Flex2.csv",
       "source_column": "Ambient Pressure (atm)"
-    }
+    },
+    "tests": []
   },
   "PSI-39": {
     "o2_pct": null,
-    "pressure_psia": null
+    "pressure_psia": null,
+    "tests": []
   },
   "PSI-23": {
     "o2_pct": {
@@ -93,7 +1743,8 @@
       "source_file": "PSI-23_Experimental table_ACME s-Flame.csv",
       "source_column": "Atmosphere*"
     },
-    "pressure_psia": null
+    "pressure_psia": null,
+    "tests": []
   },
   "PSI-10": {
     "o2_pct": {
@@ -109,7 +1760,1131 @@
       "n_values": 307,
       "source_file": "PSI-10_Experimental table_Flame Design_Inverse Flame.csv; PSI-10_Experimental table_Flame Design_Normal Flame.csv",
       "source_column": "pmean (atm)"
-    }
+    },
+    "tests": [
+      {
+        "test": "19115A1",
+        "o2_pct": 20.71,
+        "pressure_psia": 14.96,
+        "source_file": "PSI-10_Experimental table_Flame Design_Normal Flame.csv"
+      },
+      {
+        "test": "19115D2",
+        "o2_pct": 20.62,
+        "pressure_psia": 14.93,
+        "source_file": "PSI-10_Experimental table_Flame Design_Normal Flame.csv"
+      },
+      {
+        "test": "19115B1",
+        "o2_pct": 20.57,
+        "pressure_psia": 14.95,
+        "source_file": "PSI-10_Experimental table_Flame Design_Normal Flame.csv"
+      },
+      {
+        "test": "19115B2",
+        "o2_pct": 20.49,
+        "pressure_psia": 14.94,
+        "source_file": "PSI-10_Experimental table_Flame Design_Normal Flame.csv"
+      },
+      {
+        "test": "19115F1",
+        "o2_pct": 20.43,
+        "pressure_psia": 14.94,
+        "source_file": "PSI-10_Experimental table_Flame Design_Normal Flame.csv"
+      },
+      {
+        "test": "19115G1",
+        "o2_pct": 20.39,
+        "pressure_psia": 14.94,
+        "source_file": "PSI-10_Experimental table_Flame Design_Normal Flame.csv"
+      },
+      {
+        "test": "19115K1",
+        "o2_pct": 20.35,
+        "pressure_psia": 14.95,
+        "source_file": "PSI-10_Experimental table_Flame Design_Normal Flame.csv"
+      },
+      {
+        "test": "19115L1",
+        "o2_pct": 20.28,
+        "pressure_psia": 15.0,
+        "source_file": "PSI-10_Experimental table_Flame Design_Normal Flame.csv"
+      },
+      {
+        "test": "19115N1",
+        "o2_pct": 20.19,
+        "pressure_psia": 14.97,
+        "source_file": "PSI-10_Experimental table_Flame Design_Normal Flame.csv"
+      },
+      {
+        "test": "19115M4",
+        "o2_pct": 20.14,
+        "pressure_psia": 14.97,
+        "source_file": "PSI-10_Experimental table_Flame Design_Normal Flame.csv"
+      },
+      {
+        "test": "19115Q1",
+        "o2_pct": 20.09,
+        "pressure_psia": 14.98,
+        "source_file": "PSI-10_Experimental table_Flame Design_Normal Flame.csv"
+      },
+      {
+        "test": "19123A1",
+        "o2_pct": 20.98,
+        "pressure_psia": 14.77,
+        "source_file": "PSI-10_Experimental table_Flame Design_Normal Flame.csv"
+      },
+      {
+        "test": "19123A2",
+        "o2_pct": 20.92,
+        "pressure_psia": 14.81,
+        "source_file": "PSI-10_Experimental table_Flame Design_Normal Flame.csv"
+      },
+      {
+        "test": "19123A3",
+        "o2_pct": 20.86,
+        "pressure_psia": 14.85,
+        "source_file": "PSI-10_Experimental table_Flame Design_Normal Flame.csv"
+      },
+      {
+        "test": "19123A4",
+        "o2_pct": 20.8,
+        "pressure_psia": 14.86,
+        "source_file": "PSI-10_Experimental table_Flame Design_Normal Flame.csv"
+      },
+      {
+        "test": "19123C1",
+        "o2_pct": 20.74,
+        "pressure_psia": 14.85,
+        "source_file": "PSI-10_Experimental table_Flame Design_Normal Flame.csv"
+      },
+      {
+        "test": "19123F1",
+        "o2_pct": 20.67,
+        "pressure_psia": 14.88,
+        "source_file": "PSI-10_Experimental table_Flame Design_Normal Flame.csv"
+      },
+      {
+        "test": "19123F2",
+        "o2_pct": 20.61,
+        "pressure_psia": 14.89,
+        "source_file": "PSI-10_Experimental table_Flame Design_Normal Flame.csv"
+      },
+      {
+        "test": "19123F3",
+        "o2_pct": 20.55,
+        "pressure_psia": 14.91,
+        "source_file": "PSI-10_Experimental table_Flame Design_Normal Flame.csv"
+      },
+      {
+        "test": "19123K1",
+        "o2_pct": 20.49,
+        "pressure_psia": 14.95,
+        "source_file": "PSI-10_Experimental table_Flame Design_Normal Flame.csv"
+      },
+      {
+        "test": "19123B1",
+        "o2_pct": 20.44,
+        "pressure_psia": 14.97,
+        "source_file": "PSI-10_Experimental table_Flame Design_Normal Flame.csv"
+      },
+      {
+        "test": "19123D1",
+        "o2_pct": 20.38,
+        "pressure_psia": 14.99,
+        "source_file": "PSI-10_Experimental table_Flame Design_Normal Flame.csv"
+      },
+      {
+        "test": "19123J1",
+        "o2_pct": 20.32,
+        "pressure_psia": 15.0,
+        "source_file": "PSI-10_Experimental table_Flame Design_Normal Flame.csv"
+      },
+      {
+        "test": "19123L1",
+        "o2_pct": 20.26,
+        "pressure_psia": 15.01,
+        "source_file": "PSI-10_Experimental table_Flame Design_Normal Flame.csv"
+      },
+      {
+        "test": "19123L2",
+        "o2_pct": 20.18,
+        "pressure_psia": 15.02,
+        "source_file": "PSI-10_Experimental table_Flame Design_Normal Flame.csv"
+      },
+      {
+        "test": "19123L3",
+        "o2_pct": 20.11,
+        "pressure_psia": 15.02,
+        "source_file": "PSI-10_Experimental table_Flame Design_Normal Flame.csv"
+      },
+      {
+        "test": "19123L4",
+        "o2_pct": 20.05,
+        "pressure_psia": 15.03,
+        "source_file": "PSI-10_Experimental table_Flame Design_Normal Flame.csv"
+      },
+      {
+        "test": "19123L5",
+        "o2_pct": 20.01,
+        "pressure_psia": 15.02,
+        "source_file": "PSI-10_Experimental table_Flame Design_Normal Flame.csv"
+      },
+      {
+        "test": "19123L6",
+        "o2_pct": 19.98,
+        "pressure_psia": 15.02,
+        "source_file": "PSI-10_Experimental table_Flame Design_Normal Flame.csv"
+      },
+      {
+        "test": "19123L7",
+        "o2_pct": 19.94,
+        "pressure_psia": 15.01,
+        "source_file": "PSI-10_Experimental table_Flame Design_Normal Flame.csv"
+      },
+      {
+        "test": "19137A1",
+        "o2_pct": 21.02,
+        "pressure_psia": 14.79,
+        "source_file": "PSI-10_Experimental table_Flame Design_Normal Flame.csv"
+      },
+      {
+        "test": "19137B1",
+        "o2_pct": 20.95,
+        "pressure_psia": 14.79,
+        "source_file": "PSI-10_Experimental table_Flame Design_Normal Flame.csv"
+      },
+      {
+        "test": "19137C1",
+        "o2_pct": 20.87,
+        "pressure_psia": 14.82,
+        "source_file": "PSI-10_Experimental table_Flame Design_Normal Flame.csv"
+      },
+      {
+        "test": "19137D1",
+        "o2_pct": 20.8,
+        "pressure_psia": 14.83,
+        "source_file": "PSI-10_Experimental table_Flame Design_Normal Flame.csv"
+      },
+      {
+        "test": "19137F1",
+        "o2_pct": 20.73,
+        "pressure_psia": 14.85,
+        "source_file": "PSI-10_Experimental table_Flame Design_Normal Flame.csv"
+      },
+      {
+        "test": "19137F2",
+        "o2_pct": 20.66,
+        "pressure_psia": 14.85,
+        "source_file": "PSI-10_Experimental table_Flame Design_Normal Flame.csv"
+      },
+      {
+        "test": "19137F3",
+        "o2_pct": 20.59,
+        "pressure_psia": 14.87,
+        "source_file": "PSI-10_Experimental table_Flame Design_Normal Flame.csv"
+      },
+      {
+        "test": "19137G1",
+        "o2_pct": 20.54,
+        "pressure_psia": 14.88,
+        "source_file": "PSI-10_Experimental table_Flame Design_Normal Flame.csv"
+      },
+      {
+        "test": "19137H1",
+        "o2_pct": 20.49,
+        "pressure_psia": 14.88,
+        "source_file": "PSI-10_Experimental table_Flame Design_Normal Flame.csv"
+      },
+      {
+        "test": "19137J1",
+        "o2_pct": 20.44,
+        "pressure_psia": 14.87,
+        "source_file": "PSI-10_Experimental table_Flame Design_Normal Flame.csv"
+      },
+      {
+        "test": "19137K1",
+        "o2_pct": 20.4,
+        "pressure_psia": 14.86,
+        "source_file": "PSI-10_Experimental table_Flame Design_Normal Flame.csv"
+      },
+      {
+        "test": "19137K2",
+        "o2_pct": 20.36,
+        "pressure_psia": 14.86,
+        "source_file": "PSI-10_Experimental table_Flame Design_Normal Flame.csv"
+      },
+      {
+        "test": "19137L1",
+        "o2_pct": 20.32,
+        "pressure_psia": 14.86,
+        "source_file": "PSI-10_Experimental table_Flame Design_Normal Flame.csv"
+      },
+      {
+        "test": "19137L2",
+        "o2_pct": 20.28,
+        "pressure_psia": 14.87,
+        "source_file": "PSI-10_Experimental table_Flame Design_Normal Flame.csv"
+      },
+      {
+        "test": "19137L3",
+        "o2_pct": 20.24,
+        "pressure_psia": 14.88,
+        "source_file": "PSI-10_Experimental table_Flame Design_Normal Flame.csv"
+      },
+      {
+        "test": "19137L4",
+        "o2_pct": 20.2,
+        "pressure_psia": 14.91,
+        "source_file": "PSI-10_Experimental table_Flame Design_Normal Flame.csv"
+      },
+      {
+        "test": "19137L5",
+        "o2_pct": 20.16,
+        "pressure_psia": 14.88,
+        "source_file": "PSI-10_Experimental table_Flame Design_Normal Flame.csv"
+      },
+      {
+        "test": "19137L6",
+        "o2_pct": 20.13,
+        "pressure_psia": 14.89,
+        "source_file": "PSI-10_Experimental table_Flame Design_Normal Flame.csv"
+      },
+      {
+        "test": "19137L7",
+        "o2_pct": 20.09,
+        "pressure_psia": 14.89,
+        "source_file": "PSI-10_Experimental table_Flame Design_Normal Flame.csv"
+      },
+      {
+        "test": "19137L8",
+        "o2_pct": 20.05,
+        "pressure_psia": 14.9,
+        "source_file": "PSI-10_Experimental table_Flame Design_Normal Flame.csv"
+      },
+      {
+        "test": "19142G1",
+        "o2_pct": 39.69,
+        "pressure_psia": 14.96,
+        "source_file": "PSI-10_Experimental table_Flame Design_Normal Flame.csv"
+      },
+      {
+        "test": "19142G2",
+        "o2_pct": 39.0,
+        "pressure_psia": 15.03,
+        "source_file": "PSI-10_Experimental table_Flame Design_Normal Flame.csv"
+      },
+      {
+        "test": "19142G3",
+        "o2_pct": 38.38,
+        "pressure_psia": 15.08,
+        "source_file": "PSI-10_Experimental table_Flame Design_Normal Flame.csv"
+      },
+      {
+        "test": "19142F1",
+        "o2_pct": 37.88,
+        "pressure_psia": 15.15,
+        "source_file": "PSI-10_Experimental table_Flame Design_Normal Flame.csv"
+      },
+      {
+        "test": "19142J2",
+        "o2_pct": 37.32,
+        "pressure_psia": 15.2,
+        "source_file": "PSI-10_Experimental table_Flame Design_Normal Flame.csv"
+      },
+      {
+        "test": "19142G4",
+        "o2_pct": 37.87,
+        "pressure_psia": 14.58,
+        "source_file": "PSI-10_Experimental table_Flame Design_Normal Flame.csv"
+      },
+      {
+        "test": "19142G5",
+        "o2_pct": 37.56,
+        "pressure_psia": 14.58,
+        "source_file": "PSI-10_Experimental table_Flame Design_Normal Flame.csv"
+      },
+      {
+        "test": "19142J3",
+        "o2_pct": 37.34,
+        "pressure_psia": 14.58,
+        "source_file": "PSI-10_Experimental table_Flame Design_Normal Flame.csv"
+      },
+      {
+        "test": "19150A1",
+        "o2_pct": 39.82,
+        "pressure_psia": 14.82,
+        "source_file": "PSI-10_Experimental table_Flame Design_Normal Flame.csv"
+      },
+      {
+        "test": "19150A3",
+        "o2_pct": 39.71,
+        "pressure_psia": 14.88,
+        "source_file": "PSI-10_Experimental table_Flame Design_Normal Flame.csv"
+      },
+      {
+        "test": "19150A4",
+        "o2_pct": 39.55,
+        "pressure_psia": 14.97,
+        "source_file": "PSI-10_Experimental table_Flame Design_Normal Flame.csv"
+      },
+      {
+        "test": "19150A5",
+        "o2_pct": 39.26,
+        "pressure_psia": 15.05,
+        "source_file": "PSI-10_Experimental table_Flame Design_Normal Flame.csv"
+      },
+      {
+        "test": "19150B2",
+        "o2_pct": 38.89,
+        "pressure_psia": 15.12,
+        "source_file": "PSI-10_Experimental table_Flame Design_Normal Flame.csv"
+      },
+      {
+        "test": "19150C1",
+        "o2_pct": 38.63,
+        "pressure_psia": 15.2,
+        "source_file": "PSI-10_Experimental table_Flame Design_Normal Flame.csv"
+      },
+      {
+        "test": "19150B3",
+        "o2_pct": 38.28,
+        "pressure_psia": 15.24,
+        "source_file": "PSI-10_Experimental table_Flame Design_Normal Flame.csv"
+      },
+      {
+        "test": "19150D2",
+        "o2_pct": 38.01,
+        "pressure_psia": 15.25,
+        "source_file": "PSI-10_Experimental table_Flame Design_Normal Flame.csv"
+      },
+      {
+        "test": "19150F1",
+        "o2_pct": 37.11,
+        "pressure_psia": 15.38,
+        "source_file": "PSI-10_Experimental table_Flame Design_Normal Flame.csv"
+      },
+      {
+        "test": "19150G2",
+        "o2_pct": 37.04,
+        "pressure_psia": 15.35,
+        "source_file": "PSI-10_Experimental table_Flame Design_Normal Flame.csv"
+      },
+      {
+        "test": "19150H1",
+        "o2_pct": 36.56,
+        "pressure_psia": 15.36,
+        "source_file": "PSI-10_Experimental table_Flame Design_Normal Flame.csv"
+      },
+      {
+        "test": "19150J1",
+        "o2_pct": 36.17,
+        "pressure_psia": 15.4,
+        "source_file": "PSI-10_Experimental table_Flame Design_Normal Flame.csv"
+      },
+      {
+        "test": "19150G3",
+        "o2_pct": 35.83,
+        "pressure_psia": 15.42,
+        "source_file": "PSI-10_Experimental table_Flame Design_Normal Flame.csv"
+      },
+      {
+        "test": "19150N1",
+        "o2_pct": 30.03,
+        "pressure_psia": 14.87,
+        "source_file": "PSI-10_Experimental table_Flame Design_Normal Flame.csv"
+      },
+      {
+        "test": "19150S1",
+        "o2_pct": 29.4,
+        "pressure_psia": 14.87,
+        "source_file": "PSI-10_Experimental table_Flame Design_Normal Flame.csv"
+      },
+      {
+        "test": "19156B2",
+        "o2_pct": 38.9,
+        "pressure_psia": 14.93,
+        "source_file": "PSI-10_Experimental table_Flame Design_Normal Flame.csv"
+      },
+      {
+        "test": "19156B4",
+        "o2_pct": 38.79,
+        "pressure_psia": 15.14,
+        "source_file": "PSI-10_Experimental table_Flame Design_Normal Flame.csv"
+      },
+      {
+        "test": "19156K1",
+        "o2_pct": 37.97,
+        "pressure_psia": 15.26,
+        "source_file": "PSI-10_Experimental table_Flame Design_Normal Flame.csv"
+      },
+      {
+        "test": "19156C1",
+        "o2_pct": 37.69,
+        "pressure_psia": 15.31,
+        "source_file": "PSI-10_Experimental table_Flame Design_Normal Flame.csv"
+      },
+      {
+        "test": "19156C2",
+        "o2_pct": 37.5,
+        "pressure_psia": 15.27,
+        "source_file": "PSI-10_Experimental table_Flame Design_Normal Flame.csv"
+      },
+      {
+        "test": "19156C3",
+        "o2_pct": 37.07,
+        "pressure_psia": 15.28,
+        "source_file": "PSI-10_Experimental table_Flame Design_Normal Flame.csv"
+      },
+      {
+        "test": "19156J1",
+        "o2_pct": 37.34,
+        "pressure_psia": 15.22,
+        "source_file": "PSI-10_Experimental table_Flame Design_Normal Flame.csv"
+      },
+      {
+        "test": "19156J2",
+        "o2_pct": 37.04,
+        "pressure_psia": 15.23,
+        "source_file": "PSI-10_Experimental table_Flame Design_Normal Flame.csv"
+      },
+      {
+        "test": "19156J3",
+        "o2_pct": 36.85,
+        "pressure_psia": 15.2,
+        "source_file": "PSI-10_Experimental table_Flame Design_Normal Flame.csv"
+      },
+      {
+        "test": "19156J4",
+        "o2_pct": 36.59,
+        "pressure_psia": 15.21,
+        "source_file": "PSI-10_Experimental table_Flame Design_Normal Flame.csv"
+      },
+      {
+        "test": "19156J5",
+        "o2_pct": 36.45,
+        "pressure_psia": 15.21,
+        "source_file": "PSI-10_Experimental table_Flame Design_Normal Flame.csv"
+      },
+      {
+        "test": "19156J6",
+        "o2_pct": 36.27,
+        "pressure_psia": 15.21,
+        "source_file": "PSI-10_Experimental table_Flame Design_Normal Flame.csv"
+      },
+      {
+        "test": "19156J7",
+        "o2_pct": 36.09,
+        "pressure_psia": 15.2,
+        "source_file": "PSI-10_Experimental table_Flame Design_Normal Flame.csv"
+      },
+      {
+        "test": "19171D1",
+        "o2_pct": 39.43,
+        "pressure_psia": 14.91,
+        "source_file": "PSI-10_Experimental table_Flame Design_Normal Flame.csv"
+      },
+      {
+        "test": "19171D2",
+        "o2_pct": 38.66,
+        "pressure_psia": 14.89,
+        "source_file": "PSI-10_Experimental table_Flame Design_Normal Flame.csv"
+      },
+      {
+        "test": "19171D3",
+        "o2_pct": 38.13,
+        "pressure_psia": 14.88,
+        "source_file": "PSI-10_Experimental table_Flame Design_Normal Flame.csv"
+      },
+      {
+        "test": "19171D4",
+        "o2_pct": 37.86,
+        "pressure_psia": 14.86,
+        "source_file": "PSI-10_Experimental table_Flame Design_Normal Flame.csv"
+      },
+      {
+        "test": "19171D5",
+        "o2_pct": 37.39,
+        "pressure_psia": 14.87,
+        "source_file": "PSI-10_Experimental table_Flame Design_Normal Flame.csv"
+      },
+      {
+        "test": "19171S1",
+        "o2_pct": 36.95,
+        "pressure_psia": 14.89,
+        "source_file": "PSI-10_Experimental table_Flame Design_Normal Flame.csv"
+      },
+      {
+        "test": "19171B1",
+        "o2_pct": 37.89,
+        "pressure_psia": 14.99,
+        "source_file": "PSI-10_Experimental table_Flame Design_Normal Flame.csv"
+      },
+      {
+        "test": "19171B3",
+        "o2_pct": 37.21,
+        "pressure_psia": 15.14,
+        "source_file": "PSI-10_Experimental table_Flame Design_Normal Flame.csv"
+      },
+      {
+        "test": "19171J1",
+        "o2_pct": 36.54,
+        "pressure_psia": 15.25,
+        "source_file": "PSI-10_Experimental table_Flame Design_Normal Flame.csv"
+      },
+      {
+        "test": "19171J2",
+        "o2_pct": 36.26,
+        "pressure_psia": 15.23,
+        "source_file": "PSI-10_Experimental table_Flame Design_Normal Flame.csv"
+      },
+      {
+        "test": "19171J3",
+        "o2_pct": 36.14,
+        "pressure_psia": 15.26,
+        "source_file": "PSI-10_Experimental table_Flame Design_Normal Flame.csv"
+      },
+      {
+        "test": "19171J4",
+        "o2_pct": 35.96,
+        "pressure_psia": 15.29,
+        "source_file": "PSI-10_Experimental table_Flame Design_Normal Flame.csv"
+      },
+      {
+        "test": "19175A2",
+        "o2_pct": 39.84,
+        "pressure_psia": 18.57,
+        "source_file": "PSI-10_Experimental table_Flame Design_Normal Flame.csv"
+      },
+      {
+        "test": "19175A3",
+        "o2_pct": 39.72,
+        "pressure_psia": 18.72,
+        "source_file": "PSI-10_Experimental table_Flame Design_Normal Flame.csv"
+      },
+      {
+        "test": "19175A4",
+        "o2_pct": 39.1,
+        "pressure_psia": 18.65,
+        "source_file": "PSI-10_Experimental table_Flame Design_Normal Flame.csv"
+      },
+      {
+        "test": "19175B1",
+        "o2_pct": 38.87,
+        "pressure_psia": 18.62,
+        "source_file": "PSI-10_Experimental table_Flame Design_Normal Flame.csv"
+      },
+      {
+        "test": "19175B4",
+        "o2_pct": 38.76,
+        "pressure_psia": 18.57,
+        "source_file": "PSI-10_Experimental table_Flame Design_Normal Flame.csv"
+      },
+      {
+        "test": "19175B5",
+        "o2_pct": 38.49,
+        "pressure_psia": 18.59,
+        "source_file": "PSI-10_Experimental table_Flame Design_Normal Flame.csv"
+      },
+      {
+        "test": "19175B6",
+        "o2_pct": 38.94,
+        "pressure_psia": 18.42,
+        "source_file": "PSI-10_Experimental table_Flame Design_Normal Flame.csv"
+      },
+      {
+        "test": "19175B7",
+        "o2_pct": 38.78,
+        "pressure_psia": 18.49,
+        "source_file": "PSI-10_Experimental table_Flame Design_Normal Flame.csv"
+      },
+      {
+        "test": "19175B8",
+        "o2_pct": 38.6,
+        "pressure_psia": 18.44,
+        "source_file": "PSI-10_Experimental table_Flame Design_Normal Flame.csv"
+      },
+      {
+        "test": "19175B9",
+        "o2_pct": 38.4,
+        "pressure_psia": 18.47,
+        "source_file": "PSI-10_Experimental table_Flame Design_Normal Flame.csv"
+      },
+      {
+        "test": "19175N1",
+        "o2_pct": 38.25,
+        "pressure_psia": 18.51,
+        "source_file": "PSI-10_Experimental table_Flame Design_Normal Flame.csv"
+      },
+      {
+        "test": "19175N2",
+        "o2_pct": 37.94,
+        "pressure_psia": 18.53,
+        "source_file": "PSI-10_Experimental table_Flame Design_Normal Flame.csv"
+      },
+      {
+        "test": "19175N3",
+        "o2_pct": 37.74,
+        "pressure_psia": 18.53,
+        "source_file": "PSI-10_Experimental table_Flame Design_Normal Flame.csv"
+      },
+      {
+        "test": "19182G1",
+        "o2_pct": 39.85,
+        "pressure_psia": 18.59,
+        "source_file": "PSI-10_Experimental table_Flame Design_Normal Flame.csv"
+      },
+      {
+        "test": "19182G2",
+        "o2_pct": 39.68,
+        "pressure_psia": 18.62,
+        "source_file": "PSI-10_Experimental table_Flame Design_Normal Flame.csv"
+      },
+      {
+        "test": "19182G3",
+        "o2_pct": 39.52,
+        "pressure_psia": 18.66,
+        "source_file": "PSI-10_Experimental table_Flame Design_Normal Flame.csv"
+      },
+      {
+        "test": "19182G6",
+        "o2_pct": 39.36,
+        "pressure_psia": 18.72,
+        "source_file": "PSI-10_Experimental table_Flame Design_Normal Flame.csv"
+      },
+      {
+        "test": "19182G7",
+        "o2_pct": 39.23,
+        "pressure_psia": 18.78,
+        "source_file": "PSI-10_Experimental table_Flame Design_Normal Flame.csv"
+      },
+      {
+        "test": "19182G8",
+        "o2_pct": 39.02,
+        "pressure_psia": 18.83,
+        "source_file": "PSI-10_Experimental table_Flame Design_Normal Flame.csv"
+      },
+      {
+        "test": "19182G9",
+        "o2_pct": 38.82,
+        "pressure_psia": 18.85,
+        "source_file": "PSI-10_Experimental table_Flame Design_Normal Flame.csv"
+      },
+      {
+        "test": "19182N1",
+        "o2_pct": 38.63,
+        "pressure_psia": 18.87,
+        "source_file": "PSI-10_Experimental table_Flame Design_Normal Flame.csv"
+      },
+      {
+        "test": "19182N2",
+        "o2_pct": 38.9,
+        "pressure_psia": 18.83,
+        "source_file": "PSI-10_Experimental table_Flame Design_Normal Flame.csv"
+      },
+      {
+        "test": "19182N3",
+        "o2_pct": 38.76,
+        "pressure_psia": 18.86,
+        "source_file": "PSI-10_Experimental table_Flame Design_Normal Flame.csv"
+      },
+      {
+        "test": "19182A1",
+        "o2_pct": 38.57,
+        "pressure_psia": 18.82,
+        "source_file": "PSI-10_Experimental table_Flame Design_Normal Flame.csv"
+      },
+      {
+        "test": "19182C1",
+        "o2_pct": 38.48,
+        "pressure_psia": 18.93,
+        "source_file": "PSI-10_Experimental table_Flame Design_Normal Flame.csv"
+      },
+      {
+        "test": "19182C2",
+        "o2_pct": 38.26,
+        "pressure_psia": 19.0,
+        "source_file": "PSI-10_Experimental table_Flame Design_Normal Flame.csv"
+      },
+      {
+        "test": "19182N4",
+        "o2_pct": 38.03,
+        "pressure_psia": 19.06,
+        "source_file": "PSI-10_Experimental table_Flame Design_Normal Flame.csv"
+      },
+      {
+        "test": "19182F1",
+        "o2_pct": 37.84,
+        "pressure_psia": 19.16,
+        "source_file": "PSI-10_Experimental table_Flame Design_Normal Flame.csv"
+      },
+      {
+        "test": "19189A1",
+        "o2_pct": 39.86,
+        "pressure_psia": 18.57,
+        "source_file": "PSI-10_Experimental table_Flame Design_Normal Flame.csv"
+      },
+      {
+        "test": "19189A2",
+        "o2_pct": 39.58,
+        "pressure_psia": 18.66,
+        "source_file": "PSI-10_Experimental table_Flame Design_Normal Flame.csv"
+      },
+      {
+        "test": "19189A3",
+        "o2_pct": 39.49,
+        "pressure_psia": 18.67,
+        "source_file": "PSI-10_Experimental table_Flame Design_Normal Flame.csv"
+      },
+      {
+        "test": "19189D1",
+        "o2_pct": 39.4,
+        "pressure_psia": 18.74,
+        "source_file": "PSI-10_Experimental table_Flame Design_Normal Flame.csv"
+      },
+      {
+        "test": "19189A4",
+        "o2_pct": 39.15,
+        "pressure_psia": 18.84,
+        "source_file": "PSI-10_Experimental table_Flame Design_Normal Flame.csv"
+      },
+      {
+        "test": "19189D2",
+        "o2_pct": 39.09,
+        "pressure_psia": 18.88,
+        "source_file": "PSI-10_Experimental table_Flame Design_Normal Flame.csv"
+      },
+      {
+        "test": "19189D3",
+        "o2_pct": 39.01,
+        "pressure_psia": 18.98,
+        "source_file": "PSI-10_Experimental table_Flame Design_Normal Flame.csv"
+      },
+      {
+        "test": "19189H1",
+        "o2_pct": 38.77,
+        "pressure_psia": 19.1,
+        "source_file": "PSI-10_Experimental table_Flame Design_Normal Flame.csv"
+      },
+      {
+        "test": "19189J1",
+        "o2_pct": 38.72,
+        "pressure_psia": 19.16,
+        "source_file": "PSI-10_Experimental table_Flame Design_Normal Flame.csv"
+      },
+      {
+        "test": "19189J2",
+        "o2_pct": 38.32,
+        "pressure_psia": 19.17,
+        "source_file": "PSI-10_Experimental table_Flame Design_Normal Flame.csv"
+      },
+      {
+        "test": "19189J3",
+        "o2_pct": 37.97,
+        "pressure_psia": 19.17,
+        "source_file": "PSI-10_Experimental table_Flame Design_Normal Flame.csv"
+      },
+      {
+        "test": "19189K1",
+        "o2_pct": 37.6,
+        "pressure_psia": 19.19,
+        "source_file": "PSI-10_Experimental table_Flame Design_Normal Flame.csv"
+      },
+      {
+        "test": "19189K2",
+        "o2_pct": 37.25,
+        "pressure_psia": 19.19,
+        "source_file": "PSI-10_Experimental table_Flame Design_Normal Flame.csv"
+      },
+      {
+        "test": "19189K3",
+        "o2_pct": 36.93,
+        "pressure_psia": 19.19,
+        "source_file": "PSI-10_Experimental table_Flame Design_Normal Flame.csv"
+      },
+      {
+        "test": "19189P1",
+        "o2_pct": 36.55,
+        "pressure_psia": 19.26,
+        "source_file": "PSI-10_Experimental table_Flame Design_Normal Flame.csv"
+      },
+      {
+        "test": "19196A1",
+        "o2_pct": 39.56,
+        "pressure_psia": 18.46,
+        "source_file": "PSI-10_Experimental table_Flame Design_Normal Flame.csv"
+      },
+      {
+        "test": "19196A2",
+        "o2_pct": 39.45,
+        "pressure_psia": 18.48,
+        "source_file": "PSI-10_Experimental table_Flame Design_Normal Flame.csv"
+      },
+      {
+        "test": "19196A3",
+        "o2_pct": 39.22,
+        "pressure_psia": 18.52,
+        "source_file": "PSI-10_Experimental table_Flame Design_Normal Flame.csv"
+      },
+      {
+        "test": "19196B1",
+        "o2_pct": 39.08,
+        "pressure_psia": 18.53,
+        "source_file": "PSI-10_Experimental table_Flame Design_Normal Flame.csv"
+      },
+      {
+        "test": "19196B2",
+        "o2_pct": 38.98,
+        "pressure_psia": 18.55,
+        "source_file": "PSI-10_Experimental table_Flame Design_Normal Flame.csv"
+      },
+      {
+        "test": "19196B3",
+        "o2_pct": 38.83,
+        "pressure_psia": 18.56,
+        "source_file": "PSI-10_Experimental table_Flame Design_Normal Flame.csv"
+      },
+      {
+        "test": "19196B4",
+        "o2_pct": 38.66,
+        "pressure_psia": 18.57,
+        "source_file": "PSI-10_Experimental table_Flame Design_Normal Flame.csv"
+      },
+      {
+        "test": "19196C1",
+        "o2_pct": 38.46,
+        "pressure_psia": 18.6,
+        "source_file": "PSI-10_Experimental table_Flame Design_Normal Flame.csv"
+      },
+      {
+        "test": "19196C2",
+        "o2_pct": 38.31,
+        "pressure_psia": 18.6,
+        "source_file": "PSI-10_Experimental table_Flame Design_Normal Flame.csv"
+      },
+      {
+        "test": "19196D1",
+        "o2_pct": 38.61,
+        "pressure_psia": 18.69,
+        "source_file": "PSI-10_Experimental table_Flame Design_Normal Flame.csv"
+      },
+      {
+        "test": "19196D2",
+        "o2_pct": 38.43,
+        "pressure_psia": 18.73,
+        "source_file": "PSI-10_Experimental table_Flame Design_Normal Flame.csv"
+      },
+      {
+        "test": "19196F1",
+        "o2_pct": 38.22,
+        "pressure_psia": 18.59,
+        "source_file": "PSI-10_Experimental table_Flame Design_Normal Flame.csv"
+      },
+      {
+        "test": "19196N1",
+        "o2_pct": 38.16,
+        "pressure_psia": 18.68,
+        "source_file": "PSI-10_Experimental table_Flame Design_Normal Flame.csv"
+      },
+      {
+        "test": "19200A1",
+        "o2_pct": 39.47,
+        "pressure_psia": 14.85,
+        "source_file": "PSI-10_Experimental table_Flame Design_Normal Flame.csv"
+      },
+      {
+        "test": "19200A2",
+        "o2_pct": 39.25,
+        "pressure_psia": 14.81,
+        "source_file": "PSI-10_Experimental table_Flame Design_Normal Flame.csv"
+      },
+      {
+        "test": "19200A3",
+        "o2_pct": 39.2,
+        "pressure_psia": 14.84,
+        "source_file": "PSI-10_Experimental table_Flame Design_Normal Flame.csv"
+      },
+      {
+        "test": "19200A4",
+        "o2_pct": 39.06,
+        "pressure_psia": 14.87,
+        "source_file": "PSI-10_Experimental table_Flame Design_Normal Flame.csv"
+      },
+      {
+        "test": "19200A5",
+        "o2_pct": 38.9,
+        "pressure_psia": 14.89,
+        "source_file": "PSI-10_Experimental table_Flame Design_Normal Flame.csv"
+      },
+      {
+        "test": "19200A6",
+        "o2_pct": 38.7,
+        "pressure_psia": 14.93,
+        "source_file": "PSI-10_Experimental table_Flame Design_Normal Flame.csv"
+      },
+      {
+        "test": "19200A7",
+        "o2_pct": 38.45,
+        "pressure_psia": 14.96,
+        "source_file": "PSI-10_Experimental table_Flame Design_Normal Flame.csv"
+      },
+      {
+        "test": "19200A8",
+        "o2_pct": 38.26,
+        "pressure_psia": 15.06,
+        "source_file": "PSI-10_Experimental table_Flame Design_Normal Flame.csv"
+      },
+      {
+        "test": "19200K1",
+        "o2_pct": 29.94,
+        "pressure_psia": 14.83,
+        "source_file": "PSI-10_Experimental table_Flame Design_Normal Flame.csv"
+      },
+      {
+        "test": "19200H1",
+        "o2_pct": 29.74,
+        "pressure_psia": 14.85,
+        "source_file": "PSI-10_Experimental table_Flame Design_Normal Flame.csv"
+      },
+      {
+        "test": "19200H2",
+        "o2_pct": 29.4,
+        "pressure_psia": 14.91,
+        "source_file": "PSI-10_Experimental table_Flame Design_Normal Flame.csv"
+      },
+      {
+        "test": "19200H3",
+        "o2_pct": 28.94,
+        "pressure_psia": 15.06,
+        "source_file": "PSI-10_Experimental table_Flame Design_Normal Flame.csv"
+      },
+      {
+        "test": "19206A1",
+        "o2_pct": 20.99,
+        "pressure_psia": 14.79,
+        "source_file": "PSI-10_Experimental table_Flame Design_Normal Flame.csv"
+      },
+      {
+        "test": "19206A5",
+        "o2_pct": 20.9,
+        "pressure_psia": 14.83,
+        "source_file": "PSI-10_Experimental table_Flame Design_Normal Flame.csv"
+      },
+      {
+        "test": "19206G1",
+        "o2_pct": 20.82,
+        "pressure_psia": 14.86,
+        "source_file": "PSI-10_Experimental table_Flame Design_Normal Flame.csv"
+      },
+      {
+        "test": "19206G2",
+        "o2_pct": 20.74,
+        "pressure_psia": 14.86,
+        "source_file": "PSI-10_Experimental table_Flame Design_Normal Flame.csv"
+      },
+      {
+        "test": "19206G3",
+        "o2_pct": 20.68,
+        "pressure_psia": 14.87,
+        "source_file": "PSI-10_Experimental table_Flame Design_Normal Flame.csv"
+      },
+      {
+        "test": "19206G4",
+        "o2_pct": 20.62,
+        "pressure_psia": 14.88,
+        "source_file": "PSI-10_Experimental table_Flame Design_Normal Flame.csv"
+      },
+      {
+        "test": "19206G5",
+        "o2_pct": 20.55,
+        "pressure_psia": 14.89,
+        "source_file": "PSI-10_Experimental table_Flame Design_Normal Flame.csv"
+      },
+      {
+        "test": "19206L2",
+        "o2_pct": 20.45,
+        "pressure_psia": 14.83,
+        "source_file": "PSI-10_Experimental table_Flame Design_Normal Flame.csv"
+      },
+      {
+        "test": "19206L3",
+        "o2_pct": 20.39,
+        "pressure_psia": 14.84,
+        "source_file": "PSI-10_Experimental table_Flame Design_Normal Flame.csv"
+      },
+      {
+        "test": "19206L4",
+        "o2_pct": 20.34,
+        "pressure_psia": 14.85,
+        "source_file": "PSI-10_Experimental table_Flame Design_Normal Flame.csv"
+      },
+      {
+        "test": "19206L6",
+        "o2_pct": 20.29,
+        "pressure_psia": 14.86,
+        "source_file": "PSI-10_Experimental table_Flame Design_Normal Flame.csv"
+      },
+      {
+        "test": "19206G7",
+        "o2_pct": 20.22,
+        "pressure_psia": 14.86,
+        "source_file": "PSI-10_Experimental table_Flame Design_Normal Flame.csv"
+      },
+      {
+        "test": "19206K1",
+        "o2_pct": 20.15,
+        "pressure_psia": 14.86,
+        "source_file": "PSI-10_Experimental table_Flame Design_Normal Flame.csv"
+      },
+      {
+        "test": "19206K2",
+        "o2_pct": 20.1,
+        "pressure_psia": 14.86,
+        "source_file": "PSI-10_Experimental table_Flame Design_Normal Flame.csv"
+      },
+      {
+        "test": "19206G8",
+        "o2_pct": 20.06,
+        "pressure_psia": 14.86,
+        "source_file": "PSI-10_Experimental table_Flame Design_Normal Flame.csv"
+      },
+      {
+        "test": "19206G9",
+        "o2_pct": 20.05,
+        "pressure_psia": 14.9,
+        "source_file": "PSI-10_Experimental table_Flame Design_Normal Flame.csv"
+      },
+      {
+        "test": "19206N1",
+        "o2_pct": 19.99,
+        "pressure_psia": 14.87,
+        "source_file": "PSI-10_Experimental table_Flame Design_Normal Flame.csv"
+      },
+      {
+        "test": "19206H1",
+        "o2_pct": 19.97,
+        "pressure_psia": 14.86,
+        "source_file": "PSI-10_Experimental table_Flame Design_Normal Flame.csv"
+      },
+      {
+        "test": "19206H2",
+        "o2_pct": 19.92,
+        "pressure_psia": 14.9,
+        "source_file": "PSI-10_Experimental table_Flame Design_Normal Flame.csv"
+      },
+      {
+        "test": "19206H3",
+        "o2_pct": 19.86,
+        "pressure_psia": 14.91,
+        "source_file": "PSI-10_Experimental table_Flame Design_Normal Flame.csv"
+      },
+      {
+        "test": "19206H4",
+        "o2_pct": 19.8,
+        "pressure_psia": 14.91,
+        "source_file": "PSI-10_Experimental table_Flame Design_Normal Flame.csv"
+      }
+    ]
   },
   "PSI-20": {
     "o2_pct": {
@@ -119,15 +2894,18 @@
       "source_file": "PSI-20_Experimental table_ACME BRE.csv",
       "source_column": "Oxygen Conc (percent)"
     },
-    "pressure_psia": null
+    "pressure_psia": null,
+    "tests": []
   },
   "PSI-22": {
     "o2_pct": null,
-    "pressure_psia": null
+    "pressure_psia": null,
+    "tests": []
   },
   "PSI-21": {
     "o2_pct": null,
-    "pressure_psia": null
+    "pressure_psia": null,
+    "tests": []
   },
   "PSI-159": {
     "o2_pct": {
@@ -143,14 +2921,1092 @@
       "n_values": 333,
       "source_file": "PSI-159_Experimental table_CFI-G_Inverse Flames.csv; PSI-159_Experimental table_CFI-G_Normal Flames.csv",
       "source_column": "approx p (bar)"
-    }
+    },
+    "tests": [
+      {
+        "test": "21088A1",
+        "o2_pct": 39.39,
+        "pressure_psia": 13.7,
+        "source_file": "PSI-159_Experimental table_CFI-G_Normal Flames.csv"
+      },
+      {
+        "test": "21088 B1",
+        "o2_pct": 38.98,
+        "pressure_psia": 13.7,
+        "source_file": "PSI-159_Experimental table_CFI-G_Normal Flames.csv"
+      },
+      {
+        "test": "21088 C1",
+        "o2_pct": 38.63,
+        "pressure_psia": 13.7,
+        "source_file": "PSI-159_Experimental table_CFI-G_Normal Flames.csv"
+      },
+      {
+        "test": "21088 D1",
+        "o2_pct": 38.29,
+        "pressure_psia": 13.7,
+        "source_file": "PSI-159_Experimental table_CFI-G_Normal Flames.csv"
+      },
+      {
+        "test": "21088 F1",
+        "o2_pct": 38.04,
+        "pressure_psia": 13.7,
+        "source_file": "PSI-159_Experimental table_CFI-G_Normal Flames.csv"
+      },
+      {
+        "test": "21088 G1",
+        "o2_pct": 37.99,
+        "pressure_psia": 13.7,
+        "source_file": "PSI-159_Experimental table_CFI-G_Normal Flames.csv"
+      },
+      {
+        "test": "21088 H1",
+        "o2_pct": 37.61,
+        "pressure_psia": 13.7,
+        "source_file": "PSI-159_Experimental table_CFI-G_Normal Flames.csv"
+      },
+      {
+        "test": "21088 J1",
+        "o2_pct": 37.34,
+        "pressure_psia": 13.7,
+        "source_file": "PSI-159_Experimental table_CFI-G_Normal Flames.csv"
+      },
+      {
+        "test": "21088 K1",
+        "o2_pct": 36.96,
+        "pressure_psia": 13.7,
+        "source_file": "PSI-159_Experimental table_CFI-G_Normal Flames.csv"
+      },
+      {
+        "test": "21088 H2",
+        "o2_pct": 36.45,
+        "pressure_psia": 13.7,
+        "source_file": "PSI-159_Experimental table_CFI-G_Normal Flames.csv"
+      },
+      {
+        "test": "21088 M4",
+        "o2_pct": 21.01,
+        "pressure_psia": 14.7,
+        "source_file": "PSI-159_Experimental table_CFI-G_Normal Flames.csv"
+      },
+      {
+        "test": "21088 L1",
+        "o2_pct": 20.96,
+        "pressure_psia": 14.7,
+        "source_file": "PSI-159_Experimental table_CFI-G_Normal Flames.csv"
+      },
+      {
+        "test": "21088 N1",
+        "o2_pct": 18.02,
+        "pressure_psia": 14.7,
+        "source_file": "PSI-159_Experimental table_CFI-G_Normal Flames.csv"
+      },
+      {
+        "test": "21088 P1",
+        "o2_pct": 17.97,
+        "pressure_psia": 14.7,
+        "source_file": "PSI-159_Experimental table_CFI-G_Normal Flames.csv"
+      },
+      {
+        "test": "21102A1",
+        "o2_pct": 39.57,
+        "pressure_psia": 14.7,
+        "source_file": "PSI-159_Experimental table_CFI-G_Normal Flames.csv"
+      },
+      {
+        "test": "21102 C1",
+        "o2_pct": 39.3,
+        "pressure_psia": 14.7,
+        "source_file": "PSI-159_Experimental table_CFI-G_Normal Flames.csv"
+      },
+      {
+        "test": "21102 B1",
+        "o2_pct": 39.05,
+        "pressure_psia": 14.7,
+        "source_file": "PSI-159_Experimental table_CFI-G_Normal Flames.csv"
+      },
+      {
+        "test": "21102 C2",
+        "o2_pct": 38.81,
+        "pressure_psia": 14.7,
+        "source_file": "PSI-159_Experimental table_CFI-G_Normal Flames.csv"
+      },
+      {
+        "test": "21102 C3",
+        "o2_pct": 38.62,
+        "pressure_psia": 14.7,
+        "source_file": "PSI-159_Experimental table_CFI-G_Normal Flames.csv"
+      },
+      {
+        "test": "21102 C4",
+        "o2_pct": 38.25,
+        "pressure_psia": 14.7,
+        "source_file": "PSI-159_Experimental table_CFI-G_Normal Flames.csv"
+      },
+      {
+        "test": "21102 C5",
+        "o2_pct": 38.25,
+        "pressure_psia": 14.7,
+        "source_file": "PSI-159_Experimental table_CFI-G_Normal Flames.csv"
+      },
+      {
+        "test": "21102 C6",
+        "o2_pct": 38.12,
+        "pressure_psia": 14.7,
+        "source_file": "PSI-159_Experimental table_CFI-G_Normal Flames.csv"
+      },
+      {
+        "test": "21102 C7",
+        "o2_pct": 38.12,
+        "pressure_psia": 14.7,
+        "source_file": "PSI-159_Experimental table_CFI-G_Normal Flames.csv"
+      },
+      {
+        "test": "21102 C8",
+        "o2_pct": 38.07,
+        "pressure_psia": 14.7,
+        "source_file": "PSI-159_Experimental table_CFI-G_Normal Flames.csv"
+      },
+      {
+        "test": "21102 M1",
+        "o2_pct": 23.41,
+        "pressure_psia": 14.7,
+        "source_file": "PSI-159_Experimental table_CFI-G_Normal Flames.csv"
+      },
+      {
+        "test": "21102 M2",
+        "o2_pct": 23.36,
+        "pressure_psia": 14.7,
+        "source_file": "PSI-159_Experimental table_CFI-G_Normal Flames.csv"
+      },
+      {
+        "test": "21102 M3",
+        "o2_pct": 23.33,
+        "pressure_psia": 14.7,
+        "source_file": "PSI-159_Experimental table_CFI-G_Normal Flames.csv"
+      },
+      {
+        "test": "21102 M4",
+        "o2_pct": 23.33,
+        "pressure_psia": 14.7,
+        "source_file": "PSI-159_Experimental table_CFI-G_Normal Flames.csv"
+      },
+      {
+        "test": "21102 M5",
+        "o2_pct": 23.33,
+        "pressure_psia": 14.7,
+        "source_file": "PSI-159_Experimental table_CFI-G_Normal Flames.csv"
+      },
+      {
+        "test": "21102 M6",
+        "o2_pct": 23.33,
+        "pressure_psia": 14.7,
+        "source_file": "PSI-159_Experimental table_CFI-G_Normal Flames.csv"
+      },
+      {
+        "test": "21106A4",
+        "o2_pct": 39.26,
+        "pressure_psia": 7.35,
+        "source_file": "PSI-159_Experimental table_CFI-G_Normal Flames.csv"
+      },
+      {
+        "test": "21106 B1",
+        "o2_pct": 38.46,
+        "pressure_psia": 7.35,
+        "source_file": "PSI-159_Experimental table_CFI-G_Normal Flames.csv"
+      },
+      {
+        "test": "21106 C1",
+        "o2_pct": 37.72,
+        "pressure_psia": 7.35,
+        "source_file": "PSI-159_Experimental table_CFI-G_Normal Flames.csv"
+      },
+      {
+        "test": "21106 D1",
+        "o2_pct": 36.93,
+        "pressure_psia": 7.35,
+        "source_file": "PSI-159_Experimental table_CFI-G_Normal Flames.csv"
+      },
+      {
+        "test": "21106 F1",
+        "o2_pct": 35.85,
+        "pressure_psia": 7.35,
+        "source_file": "PSI-159_Experimental table_CFI-G_Normal Flames.csv"
+      },
+      {
+        "test": "21106 F2",
+        "o2_pct": 35.42,
+        "pressure_psia": 7.35,
+        "source_file": "PSI-159_Experimental table_CFI-G_Normal Flames.csv"
+      },
+      {
+        "test": "21106 F3",
+        "o2_pct": 35.42,
+        "pressure_psia": 7.35,
+        "source_file": "PSI-159_Experimental table_CFI-G_Normal Flames.csv"
+      },
+      {
+        "test": "21106 F4",
+        "o2_pct": 35.38,
+        "pressure_psia": 7.35,
+        "source_file": "PSI-159_Experimental table_CFI-G_Normal Flames.csv"
+      },
+      {
+        "test": "21106 F5",
+        "o2_pct": 35.29,
+        "pressure_psia": 7.35,
+        "source_file": "PSI-159_Experimental table_CFI-G_Normal Flames.csv"
+      },
+      {
+        "test": "21106 G6",
+        "o2_pct": 20.97,
+        "pressure_psia": 7.35,
+        "source_file": "PSI-159_Experimental table_CFI-G_Normal Flames.csv"
+      },
+      {
+        "test": "21106 G7",
+        "o2_pct": 20.86,
+        "pressure_psia": 7.35,
+        "source_file": "PSI-159_Experimental table_CFI-G_Normal Flames.csv"
+      },
+      {
+        "test": "21106 G9",
+        "o2_pct": 20.75,
+        "pressure_psia": 7.35,
+        "source_file": "PSI-159_Experimental table_CFI-G_Normal Flames.csv"
+      },
+      {
+        "test": "21106 H1",
+        "o2_pct": 20.67,
+        "pressure_psia": 7.35,
+        "source_file": "PSI-159_Experimental table_CFI-G_Normal Flames.csv"
+      },
+      {
+        "test": "21106 H2",
+        "o2_pct": 20.67,
+        "pressure_psia": 7.35,
+        "source_file": "PSI-159_Experimental table_CFI-G_Normal Flames.csv"
+      },
+      {
+        "test": "21112A1",
+        "o2_pct": 39.54,
+        "pressure_psia": 13.7,
+        "source_file": "PSI-159_Experimental table_CFI-G_Normal Flames.csv"
+      },
+      {
+        "test": "21112 A2",
+        "o2_pct": 39.4,
+        "pressure_psia": 13.7,
+        "source_file": "PSI-159_Experimental table_CFI-G_Normal Flames.csv"
+      },
+      {
+        "test": "21112 A3",
+        "o2_pct": 39.13,
+        "pressure_psia": 13.7,
+        "source_file": "PSI-159_Experimental table_CFI-G_Normal Flames.csv"
+      },
+      {
+        "test": "21112 A4",
+        "o2_pct": 38.68,
+        "pressure_psia": 13.7,
+        "source_file": "PSI-159_Experimental table_CFI-G_Normal Flames.csv"
+      },
+      {
+        "test": "21112 A5",
+        "o2_pct": 37.95,
+        "pressure_psia": 13.7,
+        "source_file": "PSI-159_Experimental table_CFI-G_Normal Flames.csv"
+      },
+      {
+        "test": "21112 C1",
+        "o2_pct": 37.77,
+        "pressure_psia": 13.7,
+        "source_file": "PSI-159_Experimental table_CFI-G_Normal Flames.csv"
+      },
+      {
+        "test": "21112 C2",
+        "o2_pct": 37.71,
+        "pressure_psia": 13.7,
+        "source_file": "PSI-159_Experimental table_CFI-G_Normal Flames.csv"
+      },
+      {
+        "test": "21112 A6",
+        "o2_pct": 37.65,
+        "pressure_psia": 13.7,
+        "source_file": "PSI-159_Experimental table_CFI-G_Normal Flames.csv"
+      },
+      {
+        "test": "21112 C3",
+        "o2_pct": 36.64,
+        "pressure_psia": 13.7,
+        "source_file": "PSI-159_Experimental table_CFI-G_Normal Flames.csv"
+      },
+      {
+        "test": "21112 C4",
+        "o2_pct": 36.64,
+        "pressure_psia": 13.7,
+        "source_file": "PSI-159_Experimental table_CFI-G_Normal Flames.csv"
+      },
+      {
+        "test": "21112 C5",
+        "o2_pct": 36.64,
+        "pressure_psia": 13.7,
+        "source_file": "PSI-159_Experimental table_CFI-G_Normal Flames.csv"
+      },
+      {
+        "test": "21112 C6",
+        "o2_pct": 36.64,
+        "pressure_psia": 13.7,
+        "source_file": "PSI-159_Experimental table_CFI-G_Normal Flames.csv"
+      },
+      {
+        "test": "21112 F1",
+        "o2_pct": 21.25,
+        "pressure_psia": 14.7,
+        "source_file": "PSI-159_Experimental table_CFI-G_Normal Flames.csv"
+      },
+      {
+        "test": "21112 F2",
+        "o2_pct": 21.25,
+        "pressure_psia": 14.7,
+        "source_file": "PSI-159_Experimental table_CFI-G_Normal Flames.csv"
+      },
+      {
+        "test": "21112 F3",
+        "o2_pct": 21.22,
+        "pressure_psia": 14.7,
+        "source_file": "PSI-159_Experimental table_CFI-G_Normal Flames.csv"
+      },
+      {
+        "test": "21112 F4",
+        "o2_pct": 21.2,
+        "pressure_psia": 14.7,
+        "source_file": "PSI-159_Experimental table_CFI-G_Normal Flames.csv"
+      },
+      {
+        "test": "21112 F5",
+        "o2_pct": 21.18,
+        "pressure_psia": 14.7,
+        "source_file": "PSI-159_Experimental table_CFI-G_Normal Flames.csv"
+      },
+      {
+        "test": "21112 H1",
+        "o2_pct": 21.18,
+        "pressure_psia": 14.7,
+        "source_file": "PSI-159_Experimental table_CFI-G_Normal Flames.csv"
+      },
+      {
+        "test": "21112 H2",
+        "o2_pct": 21.16,
+        "pressure_psia": 14.7,
+        "source_file": "PSI-159_Experimental table_CFI-G_Normal Flames.csv"
+      },
+      {
+        "test": "21112 H3",
+        "o2_pct": 21.14,
+        "pressure_psia": 14.7,
+        "source_file": "PSI-159_Experimental table_CFI-G_Normal Flames.csv"
+      },
+      {
+        "test": "21125A1",
+        "o2_pct": 39.45,
+        "pressure_psia": 14.7,
+        "source_file": "PSI-159_Experimental table_CFI-G_Normal Flames.csv"
+      },
+      {
+        "test": "21125 A2",
+        "o2_pct": 39.45,
+        "pressure_psia": 14.7,
+        "source_file": "PSI-159_Experimental table_CFI-G_Normal Flames.csv"
+      },
+      {
+        "test": "21125 A3",
+        "o2_pct": 39.41,
+        "pressure_psia": 14.7,
+        "source_file": "PSI-159_Experimental table_CFI-G_Normal Flames.csv"
+      },
+      {
+        "test": "21125 A4",
+        "o2_pct": 39.41,
+        "pressure_psia": 14.7,
+        "source_file": "PSI-159_Experimental table_CFI-G_Normal Flames.csv"
+      },
+      {
+        "test": "21125 A5",
+        "o2_pct": 39.41,
+        "pressure_psia": 14.7,
+        "source_file": "PSI-159_Experimental table_CFI-G_Normal Flames.csv"
+      },
+      {
+        "test": "21125 A6",
+        "o2_pct": 39.41,
+        "pressure_psia": 14.7,
+        "source_file": "PSI-159_Experimental table_CFI-G_Normal Flames.csv"
+      },
+      {
+        "test": "21125 A7",
+        "o2_pct": 39.41,
+        "pressure_psia": 14.7,
+        "source_file": "PSI-159_Experimental table_CFI-G_Normal Flames.csv"
+      },
+      {
+        "test": "21125 A8",
+        "o2_pct": 39.41,
+        "pressure_psia": 14.7,
+        "source_file": "PSI-159_Experimental table_CFI-G_Normal Flames.csv"
+      },
+      {
+        "test": "21125 A9",
+        "o2_pct": 39.41,
+        "pressure_psia": 14.7,
+        "source_file": "PSI-159_Experimental table_CFI-G_Normal Flames.csv"
+      },
+      {
+        "test": "21125 H1",
+        "o2_pct": 39.41,
+        "pressure_psia": 14.7,
+        "source_file": "PSI-159_Experimental table_CFI-G_Normal Flames.csv"
+      },
+      {
+        "test": "21125 H2",
+        "o2_pct": 39.41,
+        "pressure_psia": 14.7,
+        "source_file": "PSI-159_Experimental table_CFI-G_Normal Flames.csv"
+      },
+      {
+        "test": "21125 H3",
+        "o2_pct": 39.41,
+        "pressure_psia": 14.7,
+        "source_file": "PSI-159_Experimental table_CFI-G_Normal Flames.csv"
+      },
+      {
+        "test": "21125 H4",
+        "o2_pct": 39.41,
+        "pressure_psia": 14.7,
+        "source_file": "PSI-159_Experimental table_CFI-G_Normal Flames.csv"
+      },
+      {
+        "test": "21125 J1",
+        "o2_pct": 39.41,
+        "pressure_psia": 14.7,
+        "source_file": "PSI-159_Experimental table_CFI-G_Normal Flames.csv"
+      },
+      {
+        "test": "21125 H5",
+        "o2_pct": 39.41,
+        "pressure_psia": 14.7,
+        "source_file": "PSI-159_Experimental table_CFI-G_Normal Flames.csv"
+      },
+      {
+        "test": "21125 K1",
+        "o2_pct": 39.41,
+        "pressure_psia": 14.7,
+        "source_file": "PSI-159_Experimental table_CFI-G_Normal Flames.csv"
+      },
+      {
+        "test": "21125 K2",
+        "o2_pct": 38.92,
+        "pressure_psia": 14.7,
+        "source_file": "PSI-159_Experimental table_CFI-G_Normal Flames.csv"
+      },
+      {
+        "test": "21125 K3",
+        "o2_pct": 38.44,
+        "pressure_psia": 14.7,
+        "source_file": "PSI-159_Experimental table_CFI-G_Normal Flames.csv"
+      },
+      {
+        "test": "21125 D1",
+        "o2_pct": 21.11,
+        "pressure_psia": 14.7,
+        "source_file": "PSI-159_Experimental table_CFI-G_Normal Flames.csv"
+      },
+      {
+        "test": "21125 D2",
+        "o2_pct": 21.11,
+        "pressure_psia": 14.7,
+        "source_file": "PSI-159_Experimental table_CFI-G_Normal Flames.csv"
+      },
+      {
+        "test": "21125 D3",
+        "o2_pct": 21.1,
+        "pressure_psia": 14.7,
+        "source_file": "PSI-159_Experimental table_CFI-G_Normal Flames.csv"
+      },
+      {
+        "test": "21125 D4",
+        "o2_pct": 21.1,
+        "pressure_psia": 14.7,
+        "source_file": "PSI-159_Experimental table_CFI-G_Normal Flames.csv"
+      },
+      {
+        "test": "21125 D5",
+        "o2_pct": 21.1,
+        "pressure_psia": 14.7,
+        "source_file": "PSI-159_Experimental table_CFI-G_Normal Flames.csv"
+      },
+      {
+        "test": "21125 D6",
+        "o2_pct": 21.1,
+        "pressure_psia": 14.7,
+        "source_file": "PSI-159_Experimental table_CFI-G_Normal Flames.csv"
+      },
+      {
+        "test": "21130A1",
+        "o2_pct": 21.07,
+        "pressure_psia": 29.39,
+        "source_file": "PSI-159_Experimental table_CFI-G_Normal Flames.csv"
+      },
+      {
+        "test": "21130 A2",
+        "o2_pct": 21.07,
+        "pressure_psia": 29.39,
+        "source_file": "PSI-159_Experimental table_CFI-G_Normal Flames.csv"
+      },
+      {
+        "test": "21130 A3",
+        "o2_pct": 21.07,
+        "pressure_psia": 29.39,
+        "source_file": "PSI-159_Experimental table_CFI-G_Normal Flames.csv"
+      },
+      {
+        "test": "21130 A4",
+        "o2_pct": 21.07,
+        "pressure_psia": 29.39,
+        "source_file": "PSI-159_Experimental table_CFI-G_Normal Flames.csv"
+      },
+      {
+        "test": "21130 A5",
+        "o2_pct": 21.07,
+        "pressure_psia": 29.39,
+        "source_file": "PSI-159_Experimental table_CFI-G_Normal Flames.csv"
+      },
+      {
+        "test": "21130 A6",
+        "o2_pct": 21.06,
+        "pressure_psia": 29.39,
+        "source_file": "PSI-159_Experimental table_CFI-G_Normal Flames.csv"
+      },
+      {
+        "test": "21130 A7",
+        "o2_pct": 21.06,
+        "pressure_psia": 29.39,
+        "source_file": "PSI-159_Experimental table_CFI-G_Normal Flames.csv"
+      },
+      {
+        "test": "21130 A8",
+        "o2_pct": 21.06,
+        "pressure_psia": 29.39,
+        "source_file": "PSI-159_Experimental table_CFI-G_Normal Flames.csv"
+      },
+      {
+        "test": "21130 A9",
+        "o2_pct": 21.06,
+        "pressure_psia": 29.39,
+        "source_file": "PSI-159_Experimental table_CFI-G_Normal Flames.csv"
+      },
+      {
+        "test": "21130 M1",
+        "o2_pct": 21.06,
+        "pressure_psia": 29.39,
+        "source_file": "PSI-159_Experimental table_CFI-G_Normal Flames.csv"
+      },
+      {
+        "test": "21130 M2",
+        "o2_pct": 21.05,
+        "pressure_psia": 29.39,
+        "source_file": "PSI-159_Experimental table_CFI-G_Normal Flames.csv"
+      },
+      {
+        "test": "21130 M3",
+        "o2_pct": 21.02,
+        "pressure_psia": 29.39,
+        "source_file": "PSI-159_Experimental table_CFI-G_Normal Flames.csv"
+      },
+      {
+        "test": "21130 G1",
+        "o2_pct": 21.67,
+        "pressure_psia": 44.09,
+        "source_file": "PSI-159_Experimental table_CFI-G_Normal Flames.csv"
+      },
+      {
+        "test": "21130 G2",
+        "o2_pct": 21.67,
+        "pressure_psia": 44.09,
+        "source_file": "PSI-159_Experimental table_CFI-G_Normal Flames.csv"
+      },
+      {
+        "test": "21130 G3",
+        "o2_pct": 21.67,
+        "pressure_psia": 44.09,
+        "source_file": "PSI-159_Experimental table_CFI-G_Normal Flames.csv"
+      },
+      {
+        "test": "21130 G4",
+        "o2_pct": 21.67,
+        "pressure_psia": 44.09,
+        "source_file": "PSI-159_Experimental table_CFI-G_Normal Flames.csv"
+      },
+      {
+        "test": "21130 G5",
+        "o2_pct": 21.67,
+        "pressure_psia": 44.09,
+        "source_file": "PSI-159_Experimental table_CFI-G_Normal Flames.csv"
+      },
+      {
+        "test": "21130 G6",
+        "o2_pct": 21.67,
+        "pressure_psia": 44.09,
+        "source_file": "PSI-159_Experimental table_CFI-G_Normal Flames.csv"
+      },
+      {
+        "test": "21130 G7",
+        "o2_pct": 21.67,
+        "pressure_psia": 44.09,
+        "source_file": "PSI-159_Experimental table_CFI-G_Normal Flames.csv"
+      },
+      {
+        "test": "21130 N1",
+        "o2_pct": 21.67,
+        "pressure_psia": 44.09,
+        "source_file": "PSI-159_Experimental table_CFI-G_Normal Flames.csv"
+      },
+      {
+        "test": "21130 N2",
+        "o2_pct": 21.66,
+        "pressure_psia": 44.09,
+        "source_file": "PSI-159_Experimental table_CFI-G_Normal Flames.csv"
+      },
+      {
+        "test": "21130 N3",
+        "o2_pct": 21.64,
+        "pressure_psia": 44.09,
+        "source_file": "PSI-159_Experimental table_CFI-G_Normal Flames.csv"
+      },
+      {
+        "test": "21130 N4",
+        "o2_pct": 21.64,
+        "pressure_psia": 44.09,
+        "source_file": "PSI-159_Experimental table_CFI-G_Normal Flames.csv"
+      },
+      {
+        "test": "21130 N5",
+        "o2_pct": 21.64,
+        "pressure_psia": 44.09,
+        "source_file": "PSI-159_Experimental table_CFI-G_Normal Flames.csv"
+      },
+      {
+        "test": "21137A1",
+        "o2_pct": 39.96,
+        "pressure_psia": 14.7,
+        "source_file": "PSI-159_Experimental table_CFI-G_Normal Flames.csv"
+      },
+      {
+        "test": "21137 A2",
+        "o2_pct": 39.73,
+        "pressure_psia": 14.7,
+        "source_file": "PSI-159_Experimental table_CFI-G_Normal Flames.csv"
+      },
+      {
+        "test": "21137 A3",
+        "o2_pct": 39.48,
+        "pressure_psia": 14.7,
+        "source_file": "PSI-159_Experimental table_CFI-G_Normal Flames.csv"
+      },
+      {
+        "test": "21137 B1",
+        "o2_pct": 38.95,
+        "pressure_psia": 14.7,
+        "source_file": "PSI-159_Experimental table_CFI-G_Normal Flames.csv"
+      },
+      {
+        "test": "21137 B2",
+        "o2_pct": 37.12,
+        "pressure_psia": 14.7,
+        "source_file": "PSI-159_Experimental table_CFI-G_Normal Flames.csv"
+      },
+      {
+        "test": "21137 A4",
+        "o2_pct": 35.75,
+        "pressure_psia": 14.7,
+        "source_file": "PSI-159_Experimental table_CFI-G_Normal Flames.csv"
+      },
+      {
+        "test": "21137 A5",
+        "o2_pct": 35.57,
+        "pressure_psia": 14.7,
+        "source_file": "PSI-159_Experimental table_CFI-G_Normal Flames.csv"
+      },
+      {
+        "test": "21137 A6",
+        "o2_pct": 35.37,
+        "pressure_psia": 14.7,
+        "source_file": "PSI-159_Experimental table_CFI-G_Normal Flames.csv"
+      },
+      {
+        "test": "21137 A7",
+        "o2_pct": 35.24,
+        "pressure_psia": 14.7,
+        "source_file": "PSI-159_Experimental table_CFI-G_Normal Flames.csv"
+      },
+      {
+        "test": "21137 D1",
+        "o2_pct": 21.0,
+        "pressure_psia": 14.7,
+        "source_file": "PSI-159_Experimental table_CFI-G_Normal Flames.csv"
+      },
+      {
+        "test": "21137 D2",
+        "o2_pct": 20.91,
+        "pressure_psia": 14.7,
+        "source_file": "PSI-159_Experimental table_CFI-G_Normal Flames.csv"
+      },
+      {
+        "test": "21137 C1",
+        "o2_pct": 20.89,
+        "pressure_psia": 14.7,
+        "source_file": "PSI-159_Experimental table_CFI-G_Normal Flames.csv"
+      },
+      {
+        "test": "21153A1",
+        "o2_pct": 38.87,
+        "pressure_psia": 7.35,
+        "source_file": "PSI-159_Experimental table_CFI-G_Normal Flames.csv"
+      },
+      {
+        "test": "21153 A2",
+        "o2_pct": 37.59,
+        "pressure_psia": 7.35,
+        "source_file": "PSI-159_Experimental table_CFI-G_Normal Flames.csv"
+      },
+      {
+        "test": "21153 A3",
+        "o2_pct": 36.39,
+        "pressure_psia": 7.35,
+        "source_file": "PSI-159_Experimental table_CFI-G_Normal Flames.csv"
+      },
+      {
+        "test": "21153 F1",
+        "o2_pct": 34.08,
+        "pressure_psia": 7.35,
+        "source_file": "PSI-159_Experimental table_CFI-G_Normal Flames.csv"
+      },
+      {
+        "test": "21153 A4",
+        "o2_pct": 33.49,
+        "pressure_psia": 7.35,
+        "source_file": "PSI-159_Experimental table_CFI-G_Normal Flames.csv"
+      },
+      {
+        "test": "21153 A5",
+        "o2_pct": 33.24,
+        "pressure_psia": 7.35,
+        "source_file": "PSI-159_Experimental table_CFI-G_Normal Flames.csv"
+      },
+      {
+        "test": "21153 C1",
+        "o2_pct": 39.85,
+        "pressure_psia": 29.39,
+        "source_file": "PSI-159_Experimental table_CFI-G_Normal Flames.csv"
+      },
+      {
+        "test": "21153 C2",
+        "o2_pct": 39.66,
+        "pressure_psia": 29.39,
+        "source_file": "PSI-159_Experimental table_CFI-G_Normal Flames.csv"
+      },
+      {
+        "test": "21153 C3",
+        "o2_pct": 39.48,
+        "pressure_psia": 29.39,
+        "source_file": "PSI-159_Experimental table_CFI-G_Normal Flames.csv"
+      },
+      {
+        "test": "21153 G1",
+        "o2_pct": 39.2,
+        "pressure_psia": 29.39,
+        "source_file": "PSI-159_Experimental table_CFI-G_Normal Flames.csv"
+      },
+      {
+        "test": "21153 C4",
+        "o2_pct": 38.89,
+        "pressure_psia": 29.39,
+        "source_file": "PSI-159_Experimental table_CFI-G_Normal Flames.csv"
+      },
+      {
+        "test": "21153 C5",
+        "o2_pct": 38.42,
+        "pressure_psia": 29.39,
+        "source_file": "PSI-159_Experimental table_CFI-G_Normal Flames.csv"
+      },
+      {
+        "test": "21153 C6",
+        "o2_pct": 38.36,
+        "pressure_psia": 29.39,
+        "source_file": "PSI-159_Experimental table_CFI-G_Normal Flames.csv"
+      },
+      {
+        "test": "21153 C7",
+        "o2_pct": 38.21,
+        "pressure_psia": 29.39,
+        "source_file": "PSI-159_Experimental table_CFI-G_Normal Flames.csv"
+      },
+      {
+        "test": "21162A1",
+        "o2_pct": 39.97,
+        "pressure_psia": 14.7,
+        "source_file": "PSI-159_Experimental table_CFI-G_Normal Flames.csv"
+      },
+      {
+        "test": "21162 A2",
+        "o2_pct": 39.5,
+        "pressure_psia": 14.7,
+        "source_file": "PSI-159_Experimental table_CFI-G_Normal Flames.csv"
+      },
+      {
+        "test": "21162 A3",
+        "o2_pct": 39.0,
+        "pressure_psia": 14.7,
+        "source_file": "PSI-159_Experimental table_CFI-G_Normal Flames.csv"
+      },
+      {
+        "test": "21162 B1",
+        "o2_pct": 37.93,
+        "pressure_psia": 14.7,
+        "source_file": "PSI-159_Experimental table_CFI-G_Normal Flames.csv"
+      },
+      {
+        "test": "21162 A4",
+        "o2_pct": 37.21,
+        "pressure_psia": 14.7,
+        "source_file": "PSI-159_Experimental table_CFI-G_Normal Flames.csv"
+      },
+      {
+        "test": "21162 C1",
+        "o2_pct": 21.0,
+        "pressure_psia": 14.7,
+        "source_file": "PSI-159_Experimental table_CFI-G_Normal Flames.csv"
+      },
+      {
+        "test": "21162 C2",
+        "o2_pct": 20.96,
+        "pressure_psia": 14.7,
+        "source_file": "PSI-159_Experimental table_CFI-G_Normal Flames.csv"
+      },
+      {
+        "test": "21162 C3",
+        "o2_pct": 20.93,
+        "pressure_psia": 14.7,
+        "source_file": "PSI-159_Experimental table_CFI-G_Normal Flames.csv"
+      },
+      {
+        "test": "21162 C4",
+        "o2_pct": 20.89,
+        "pressure_psia": 14.7,
+        "source_file": "PSI-159_Experimental table_CFI-G_Normal Flames.csv"
+      },
+      {
+        "test": "21162 C5",
+        "o2_pct": 20.84,
+        "pressure_psia": 14.7,
+        "source_file": "PSI-159_Experimental table_CFI-G_Normal Flames.csv"
+      },
+      {
+        "test": "21162 D1",
+        "o2_pct": 20.75,
+        "pressure_psia": 14.7,
+        "source_file": "PSI-159_Experimental table_CFI-G_Normal Flames.csv"
+      },
+      {
+        "test": "21162 F1",
+        "o2_pct": 20.72,
+        "pressure_psia": 14.7,
+        "source_file": "PSI-159_Experimental table_CFI-G_Normal Flames.csv"
+      },
+      {
+        "test": "21162 F2",
+        "o2_pct": 20.72,
+        "pressure_psia": 14.7,
+        "source_file": "PSI-159_Experimental table_CFI-G_Normal Flames.csv"
+      },
+      {
+        "test": "21174 A1",
+        "o2_pct": 38.86,
+        "pressure_psia": 7.35,
+        "source_file": "PSI-159_Experimental table_CFI-G_Normal Flames.csv"
+      },
+      {
+        "test": "21174 A2",
+        "o2_pct": 38.32,
+        "pressure_psia": 7.35,
+        "source_file": "PSI-159_Experimental table_CFI-G_Normal Flames.csv"
+      },
+      {
+        "test": "21174 A3",
+        "o2_pct": 37.85,
+        "pressure_psia": 7.35,
+        "source_file": "PSI-159_Experimental table_CFI-G_Normal Flames.csv"
+      },
+      {
+        "test": "21174 A4",
+        "o2_pct": 37.21,
+        "pressure_psia": 7.35,
+        "source_file": "PSI-159_Experimental table_CFI-G_Normal Flames.csv"
+      },
+      {
+        "test": "21174 B1",
+        "o2_pct": 35.54,
+        "pressure_psia": 7.35,
+        "source_file": "PSI-159_Experimental table_CFI-G_Normal Flames.csv"
+      },
+      {
+        "test": "21174 C1",
+        "o2_pct": 39.85,
+        "pressure_psia": 29.39,
+        "source_file": "PSI-159_Experimental table_CFI-G_Normal Flames.csv"
+      },
+      {
+        "test": "21174 C2",
+        "o2_pct": 39.65,
+        "pressure_psia": 29.39,
+        "source_file": "PSI-159_Experimental table_CFI-G_Normal Flames.csv"
+      },
+      {
+        "test": "21174 C3",
+        "o2_pct": 39.54,
+        "pressure_psia": 29.39,
+        "source_file": "PSI-159_Experimental table_CFI-G_Normal Flames.csv"
+      },
+      {
+        "test": "21174 C4",
+        "o2_pct": 39.43,
+        "pressure_psia": 29.39,
+        "source_file": "PSI-159_Experimental table_CFI-G_Normal Flames.csv"
+      },
+      {
+        "test": "21174 D1",
+        "o2_pct": 39.25,
+        "pressure_psia": 29.39,
+        "source_file": "PSI-159_Experimental table_CFI-G_Normal Flames.csv"
+      },
+      {
+        "test": "21174 F1",
+        "o2_pct": 39.08,
+        "pressure_psia": 29.39,
+        "source_file": "PSI-159_Experimental table_CFI-G_Normal Flames.csv"
+      },
+      {
+        "test": "21174 C5",
+        "o2_pct": 38.96,
+        "pressure_psia": 29.39,
+        "source_file": "PSI-159_Experimental table_CFI-G_Normal Flames.csv"
+      },
+      {
+        "test": "21174 C6",
+        "o2_pct": 38.93,
+        "pressure_psia": 29.39,
+        "source_file": "PSI-159_Experimental table_CFI-G_Normal Flames.csv"
+      },
+      {
+        "test": "21174 F2",
+        "o2_pct": 38.55,
+        "pressure_psia": 29.39,
+        "source_file": "PSI-159_Experimental table_CFI-G_Normal Flames.csv"
+      },
+      {
+        "test": "21174 F3",
+        "o2_pct": 38.48,
+        "pressure_psia": 29.39,
+        "source_file": "PSI-159_Experimental table_CFI-G_Normal Flames.csv"
+      },
+      {
+        "test": "21174 F4",
+        "o2_pct": 38.41,
+        "pressure_psia": 29.39,
+        "source_file": "PSI-159_Experimental table_CFI-G_Normal Flames.csv"
+      },
+      {
+        "test": "21291 A1",
+        "o2_pct": 39.93,
+        "pressure_psia": 29.39,
+        "source_file": "PSI-159_Experimental table_CFI-G_Normal Flames.csv"
+      },
+      {
+        "test": "21291 C1",
+        "o2_pct": 39.42,
+        "pressure_psia": 29.39,
+        "source_file": "PSI-159_Experimental table_CFI-G_Normal Flames.csv"
+      },
+      {
+        "test": "21291 C2",
+        "o2_pct": 38.93,
+        "pressure_psia": 29.39,
+        "source_file": "PSI-159_Experimental table_CFI-G_Normal Flames.csv"
+      },
+      {
+        "test": "21291 B1",
+        "o2_pct": 38.83,
+        "pressure_psia": 29.39,
+        "source_file": "PSI-159_Experimental table_CFI-G_Normal Flames.csv"
+      },
+      {
+        "test": "21291 H1",
+        "o2_pct": 38.72,
+        "pressure_psia": 29.39,
+        "source_file": "PSI-159_Experimental table_CFI-G_Normal Flames.csv"
+      },
+      {
+        "test": "21291 H2",
+        "o2_pct": 38.62,
+        "pressure_psia": 29.39,
+        "source_file": "PSI-159_Experimental table_CFI-G_Normal Flames.csv"
+      },
+      {
+        "test": "21291 D1",
+        "o2_pct": 39.78,
+        "pressure_psia": 14.7,
+        "source_file": "PSI-159_Experimental table_CFI-G_Normal Flames.csv"
+      },
+      {
+        "test": "21291 G1",
+        "o2_pct": 39.49,
+        "pressure_psia": 14.7,
+        "source_file": "PSI-159_Experimental table_CFI-G_Normal Flames.csv"
+      },
+      {
+        "test": "21291 G2",
+        "o2_pct": 38.85,
+        "pressure_psia": 14.7,
+        "source_file": "PSI-159_Experimental table_CFI-G_Normal Flames.csv"
+      },
+      {
+        "test": "21291 J1",
+        "o2_pct": 38.54,
+        "pressure_psia": 14.7,
+        "source_file": "PSI-159_Experimental table_CFI-G_Normal Flames.csv"
+      },
+      {
+        "test": "21291 J2",
+        "o2_pct": 38.27,
+        "pressure_psia": 14.7,
+        "source_file": "PSI-159_Experimental table_CFI-G_Normal Flames.csv"
+      },
+      {
+        "test": "21291 J3",
+        "o2_pct": 38.08,
+        "pressure_psia": 14.7,
+        "source_file": "PSI-159_Experimental table_CFI-G_Normal Flames.csv"
+      }
+    ]
   },
   "PSI-107": {
     "o2_pct": null,
-    "pressure_psia": null
+    "pressure_psia": null,
+    "tests": []
   },
   "PSI-106": {
     "o2_pct": null,
-    "pressure_psia": null
+    "pressure_psia": null,
+    "tests": []
   }
 }

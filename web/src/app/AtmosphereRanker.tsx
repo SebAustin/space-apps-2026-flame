@@ -3,9 +3,33 @@
 import { useMemo, useState } from "react";
 import { HABITATS } from "@/lib/habitats";
 import type { Investigation } from "@/lib/investigations";
-import { rankByAtmosphere, type DimensionMatch } from "@/lib/match";
+import { nearestTest, rankByAtmosphere, type DimensionMatch, type Nearest } from "@/lib/match";
 
 const fmt = (n: number) => (Number.isInteger(n) ? String(n) : n.toFixed(1));
+const signed = (n: number) => `${n >= 0 ? "+" : "−"}${fmt(Math.abs(n))}`;
+
+type Point = Investigation["tests"][number];
+
+function NearestTest({ nearest, hasTests }: { nearest: Nearest<Point> | null; hasTests: boolean }) {
+  if (!hasTests || nearest === null) {
+    return (
+      <p className="nearest nearest-none">
+        Exact combination not checkable: the PSI table does not give O₂ and pressure for each single test.
+      </p>
+    );
+  }
+  const { test, o2Diff, pressureDiff } = nearest;
+  return (
+    <p className="nearest">
+      <span className="nearest-label">Nearest single test</span>{" "}
+      <strong>{test.test}</strong>: {fmt(test.o2_pct)}% O₂ at {fmt(test.pressure_psia)} psia{" "}
+      <span className="nearest-diff">
+        ({signed(o2Diff)} pts O₂, {signed(pressureDiff)} psia)
+      </span>
+      <span className="range-source">{test.source_file}</span>
+    </p>
+  );
+}
 
 function Badge({ match, unit }: { match: DimensionMatch; unit: string }) {
   if (match.status === "covered") return <span className="badge badge-ok">within range</span>;
@@ -59,10 +83,19 @@ export default function AtmosphereRanker({ investigations }: { investigations: I
   const valid = o2 !== "" && pressure !== "" && o2Num > 0 && o2Num <= 100 && pNum > 0;
   const edited = habitat.o2_pct !== o2Num || habitat.pressure_psia !== pNum;
 
-  const ranked = useMemo(
-    () => (valid ? rankByAtmosphere(investigations, { o2_pct: o2Num, pressure_psia: pNum }) : []),
-    [investigations, valid, o2Num, pNum],
-  );
+  const ranked = useMemo(() => {
+    if (!valid) return [];
+    const target = { o2_pct: o2Num, pressure_psia: pNum };
+    // Same range match: an investigation with an actual nearby test comes first.
+    return rankByAtmosphere(investigations, target)
+      .map((inv) => ({ ...inv, nearest: nearestTest(inv.tests, target) }))
+      .sort(
+        (a, b) =>
+          a.unknownCount - b.unknownCount ||
+          a.relativeGap - b.relativeGap ||
+          (a.nearest?.relativeDistance ?? Infinity) - (b.nearest?.relativeDistance ?? Infinity),
+      );
+  }, [investigations, valid, o2Num, pNum]);
 
   return (
     <section aria-labelledby="ranker-heading">
@@ -128,6 +161,9 @@ export default function AtmosphereRanker({ investigations }: { investigations: I
                   <RangeCell label="O₂ tested" unit="%" match={inv.o2} source={inv.o2Source} />
                   <RangeCell label="Pressure tested" unit="psia" match={inv.pressure} source={inv.pressureSource} />
                 </div>
+                {inv.o2.status !== "unknown" && inv.pressure.status !== "unknown" && (
+                  <NearestTest nearest={inv.nearest} hasTests={inv.tests.length > 0} />
+                )}
                 {inv.objective && typeof inv.objective.value === "string" && (
                   <details>
                     <summary>Objective</summary>

@@ -59,6 +59,24 @@ def test_s_flame_o2_is_21_to_30_percent():
 
 
 @pytest.mark.skipif(not TABLES.exists(), reason="raw PSI tables not downloaded")
+def test_flex_lists_each_test_with_both_values():
+    tests = extract_all(TABLES)["PSI-69"]["tests"]
+    assert len(tests) > 200
+    first = tests[0]
+    assert first["test"] == "FLEX #1, 20CAL08"
+    assert first["o2_pct"] == pytest.approx(21.0)
+    assert first["pressure_psia"] == pytest.approx(757.7 * 14.6959 / 760, abs=0.01)
+    assert first["source_file"] == "PSI-69_Experimental table_FLEX.csv"
+
+
+@pytest.mark.skipif(not TABLES.exists(), reason="raw PSI tables not downloaded")
+def test_summary_tables_list_no_single_tests():
+    out = extract_all(TABLES)
+    assert out["PSI-68"]["tests"] == []  # FLEX-2's table lists value sets, not tests
+    assert out["PSI-25"]["tests"] == []  # BASS-II has no pressure column
+
+
+@pytest.mark.skipif(not TABLES.exists(), reason="raw PSI tables not downloaded")
 def test_records_without_atmosphere_columns_stay_unknown():
     out = extract_all(TABLES)
     assert out["PSI-26"]["o2_pct"] is None

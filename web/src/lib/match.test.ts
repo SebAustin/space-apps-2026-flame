@@ -1,5 +1,25 @@
 import { describe, expect, it } from "vitest";
-import { dimensionMatch, rankByAtmosphere, type Tested } from "./match";
+import { dimensionMatch, nearestTest, rankByAtmosphere, type Tested } from "./match";
+
+describe("nearestTest", () => {
+  const target = { o2_pct: 30, pressure_psia: 10.2 };
+  const pt = (test: string, o2_pct: number, pressure_psia: number) => ({ test, o2_pct, pressure_psia });
+
+  it("is null when the table lists no single tests", () => {
+    expect(nearestTest([], target)).toBeNull();
+  });
+
+  it("picks the test closest on both values together, not on one", () => {
+    const tests = [pt("o2-only", 30, 14.7), pt("both-near", 29, 10.3), pt("p-only", 21, 10.2)];
+    expect(nearestTest(tests, target)?.test.test).toBe("both-near");
+  });
+
+  it("reports each value's difference from the target", () => {
+    const n = nearestTest([pt("t", 29, 10.3)], target)!;
+    expect(n.o2Diff).toBeCloseTo(-1);
+    expect(n.pressureDiff).toBeCloseTo(0.1);
+  });
+});
 
 const r = (min: number, max: number) => ({ min, max });
 

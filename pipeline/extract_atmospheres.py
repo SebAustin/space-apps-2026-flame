@@ -44,6 +44,17 @@ COLUMNS = [
     ("PSI-159", "PSI-159_Experimental table_CFI-G_Inverse Flames.csv", "pressure", "approx p (bar)", "bar"),
 ]
 
+# Tables with one row per test and both values on that row:
+# (accession, file, test-id columns, O2 column, O2 unit, pressure column, pressure unit).
+PER_TEST = [
+    ("PSI-69", "PSI-69_Experimental table_FLEX.csv", ("FLEX Test #", "FLEX Identifier"),
+     "O initial ambient composition; mole fraction", "fraction", "Ambient pressure; mmHg", "mmHg"),
+    ("PSI-10", "PSI-10_Experimental table_Flame Design_Normal Flame.csv", ("Test",),
+     "XO2 (init)", "fraction", "pmean (atm)", "atm"),
+    ("PSI-159", "PSI-159_Experimental table_CFI-G_Normal Flames.csv", ("Test",),
+     " XO2 before test", "fraction", "approx p (bar)", "bar"),
+]
+
 ALL_RECORDS = [
     "PSI-26", "PSI-25", "PSI-98", "PSI-99", "PSI-100", "PSI-102", "PSI-101", "PSI-47",
     "PSI-69", "PSI-68", "PSI-39", "PSI-23", "PSI-10", "PSI-20", "PSI-22", "PSI-21",
@@ -109,13 +120,45 @@ def extract_all(tables: Path = TABLES) -> dict:
         if vals:
             found[acc][quantity].append((fname, column, vals))
 
+    tests = {acc: [] for acc in ALL_RECORDS}
+    for acc, fname, id_cols, o2_col, o2_unit, p_col, p_unit in PER_TEST:
+        path = tables / fname
+        if path.exists():
+            tests[acc].extend(per_test_points(path, id_cols, o2_col, o2_unit, p_col, p_unit))
+
     out = {}
     for acc, q in found.items():
         out[acc] = {
             "o2_pct": summarize(q["o2"]),
             "pressure_psia": summarize(q["pressure"]),
+            "tests": tests[acc],
         }
     return out
+
+
+def per_test_points(path: Path, id_cols, o2_col, o2_unit, p_col, p_unit) -> list[dict]:
+    """One point per table row that states a single O2 and a single pressure."""
+    points = []
+    for row in read_rows(path):
+        o2 = parse_numbers(row.get(o2_col, ""))
+        p = parse_numbers(row.get(p_col, ""))
+        if len(o2) != 1 or len(p) != 1:
+            continue
+        o2_pct = o2[0] * 100.0 if o2_unit == "fraction" else o2[0]
+        p_psia = to_psia(p[0], p_unit)
+        if not (PLAUSIBLE["o2"][0] <= o2_pct <= PLAUSIBLE["o2"][1]):
+            continue
+        if not (PLAUSIBLE["pressure"][0] <= p_psia <= PLAUSIBLE["pressure"][1]):
+            continue
+        ids = [(row.get(c) or "").strip() for c in id_cols]
+        label = f"FLEX #{ids[0]}, {ids[1]}" if path.name.startswith("PSI-69") else ", ".join(i for i in ids if i)
+        points.append({
+            "test": label,
+            "o2_pct": round(o2_pct, 2),
+            "pressure_psia": round(p_psia, 2),
+            "source_file": path.name,
+        })
+    return points
 
 
 def summarize(parts: list) -> dict | None:

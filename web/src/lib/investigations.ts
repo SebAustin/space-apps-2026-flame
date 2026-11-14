@@ -1,6 +1,6 @@
 import raw from "../../../data/psi/investigations.json";
 import atmospheres from "../data/atmospheres.json";
-import type { Range, Tested } from "./match";
+import type { Range, Tested, TestPoint } from "./match";
 
 type Sourced = { value: unknown; source_url: string; locator: string | null; quote: string } | null;
 type RawRecord = Record<string, Sourced> & { challenge_name: string; scope: string };
@@ -21,6 +21,7 @@ export type Investigation = Tested & {
   doiUrl: string | null;
   o2Source: Extracted;
   pressureSource: Extracted;
+  tests: (TestPoint & { source_file: string })[];
 };
 
 const text = (s: Sourced) => (s && typeof s.value === "string" ? s.value : null);
@@ -38,7 +39,12 @@ export function loadInvestigations(): Investigation[] {
       existing.name = `${existing.name} / ${r.challenge_name}`;
       continue;
     }
-    const atm = (atmospheres as Record<string, { o2_pct: Extracted; pressure_psia: Extracted }>)[id];
+    const atm = (
+      atmospheres as Record<
+        string,
+        { o2_pct: Extracted; pressure_psia: Extracted; tests: (TestPoint & { source_file: string })[] }
+      >
+    )[id];
     const doi = text(r.doi);
     byId.set(id, {
       id,
@@ -51,6 +57,7 @@ export function loadInvestigations(): Investigation[] {
       pressure_psia: range(atm?.pressure_psia ?? null),
       o2Source: atm?.o2_pct ?? null,
       pressureSource: atm?.pressure_psia ?? null,
+      tests: atm?.tests ?? [],
     });
   }
   return [...byId.values()];

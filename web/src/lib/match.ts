@@ -20,6 +20,32 @@ export type Ranked<T extends Tested> = T & {
   relativeGap: number;
 };
 
+export type TestPoint = { test: string; o2_pct: number; pressure_psia: number };
+
+export type Nearest<P extends TestPoint> = {
+  test: P;
+  o2Diff: number;
+  pressureDiff: number;
+  relativeDistance: number;
+};
+
+/**
+ * The single test whose O2 and pressure together lie closest to the target, each
+ * difference taken as a fraction of the target value so O2 points and psia weigh alike.
+ */
+export function nearestTest<P extends TestPoint>(tests: P[], target: Target): Nearest<P> | null {
+  let best: Nearest<P> | null = null;
+  for (const test of tests) {
+    const o2Diff = test.o2_pct - target.o2_pct;
+    const pressureDiff = test.pressure_psia - target.pressure_psia;
+    const relativeDistance = Math.abs(o2Diff) / target.o2_pct + Math.abs(pressureDiff) / target.pressure_psia;
+    if (best === null || relativeDistance < best.relativeDistance) {
+      best = { test, o2Diff, pressureDiff, relativeDistance };
+    }
+  }
+  return best;
+}
+
 /** Does a tested range include the target? If not, how far is its nearest edge? */
 export function dimensionMatch(target: number, range: Range | null): DimensionMatch {
   if (range === null) return { status: "unknown", gap: null };
