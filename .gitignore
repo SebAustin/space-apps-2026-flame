@@ -1,0 +1,5 @@
+data/raw/
+.DS_Store
+.env*
+node_modules/
+.venv/
