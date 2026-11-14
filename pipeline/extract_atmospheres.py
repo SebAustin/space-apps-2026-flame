@@ -1,0 +1,140 @@
+"""Extract the tested oxygen and pressure ranges of each PSI combustion record.
+
+Reads the "Experimental table" CSVs in data/raw/tables and writes
+web/src/data/atmospheres.json: for each PSI accession, the min and max ambient
+O2 (percent by volume) and pressure (psia) found in its table, with the file and
+column each range came from. A record whose table has no such column gets null,
+never a guess.
+
+Inverse flames (oxygen flowing out of the burner into a fuel atmosphere) are
+skipped for O2: their O2 column describes the burner stream, not the ambient.
+
+Run: python3 -I pipeline/extract_atmospheres.py
+"""
+
+import csv
+import io
+import json
+import re
+from pathlib import Path
+
+ROOT = Path(__file__).resolve().parent.parent
+TABLES = ROOT / "data" / "raw" / "tables"
+OUT = ROOT / "web" / "src" / "data" / "atmospheres.json"
+
+PSIA_PER = {"psia": 1.0, "atm": 14.6959, "bar": 14.5038, "mmHg": 14.6959 / 760.0}
+
+# (accession, file, quantity, column, unit). Units: "pct" or "fraction" for O2,
+# a PSIA_PER key for pressure. Columns are exact header text from each CSV.
+COLUMNS = [
+    ("PSI-25", "PSI-25_Experimental table_BASS-II.csv", "o2", "Calibrated  initial O2 % by vol ", "pct"),
+    ("PSI-98", "PSI-98_Experimental table_SAFFIRE-1.csv", "o2", "Percent O2", "pct"),
+    ("PSI-99", "PSI-99_Experimental table_SAFFIRE-2.csv", "o2", "Percent O2 (Note 1)", "pct"),
+    ("PSI-69", "PSI-69_Experimental table_FLEX.csv", "o2", "O initial ambient composition; mole fraction", "fraction"),
+    ("PSI-69", "PSI-69_Experimental table_FLEX.csv", "pressure", "Ambient pressure; mmHg", "mmHg"),
+    ("PSI-68", "PSI-68_Experimental table_Flex2.csv", "o2", "Oxygen Mole Fraction", "fraction"),
+    ("PSI-68", "PSI-68_Experimental table_Flex2.csv", "pressure", "Ambient Pressure (atm)", "atm"),
+    ("PSI-23", "PSI-23_Experimental table_ACME s-Flame.csv", "o2", "Atmosphere*", "pct"),
+    ("PSI-10", "PSI-10_Experimental table_Flame Design_Normal Flame.csv", "o2", "XO2 (init)", "fraction"),
+    ("PSI-10", "PSI-10_Experimental table_Flame Design_Normal Flame.csv", "pressure", "pmean (atm)", "atm"),
+    ("PSI-10", "PSI-10_Experimental table_Flame Design_Inverse Flame.csv", "pressure", "pmean (atm)", "atm"),
+    ("PSI-20", "PSI-20_Experimental table_ACME BRE.csv", "o2", "Oxygen Conc (percent)", "pct"),
+    ("PSI-159", "PSI-159_Experimental table_CFI-G_Normal Flames.csv", "o2", " XO2 before test", "fraction"),
+    ("PSI-159", "PSI-159_Experimental table_CFI-G_Normal Flames.csv", "pressure", "approx p (bar)", "bar"),
+    ("PSI-159", "PSI-159_Experimental table_CFI-G_Inverse Flames.csv", "pressure", "approx p (bar)", "bar"),
+]
+
+ALL_RECORDS = [
+    "PSI-26", "PSI-25", "PSI-98", "PSI-99", "PSI-100", "PSI-102", "PSI-101", "PSI-47",
+    "PSI-69", "PSI-68", "PSI-39", "PSI-23", "PSI-10", "PSI-20", "PSI-22", "PSI-21",
+    "PSI-159", "PSI-107", "PSI-106",
+]
+
+# Plausible ambient ranges; values outside are table typos and are dropped.
+PLAUSIBLE = {"o2": (5.0, 100.0), "pressure": (0.5, 200.0)}
+
+NUMBER = re.compile(r"\d+(?:\.\d+)?")
+
+
+def parse_numbers(text: str) -> list[float]:
+    """Every number in a cell: "21.5 - 21.7" -> [21.5, 21.7]; "-" -> []."""
+    return [float(m) for m in NUMBER.findall(text or "")]
+
+
+PERCENT = re.compile(r"(\d+(?:\.\d+)?)\s*%")
+
+
+def parse_percentages(text: str) -> list[float]:
+    """Only numbers written as percentages: "~21% O2 with N4" -> [21.0]."""
+    return [float(m) for m in PERCENT.findall(text or "")]
+
+
+def to_psia(value: float, unit: str) -> float:
+    return value * PSIA_PER[unit]
+
+
+def read_rows(path: Path) -> list[dict[str, str]]:
+    raw = path.read_bytes()
+    try:
+        text = raw.decode("utf-8-sig")
+    except UnicodeDecodeError:
+        text = raw.decode("cp1252")
+    text = text.replace("\r\n", "\n").replace("\r", "\n")
+    return list(csv.DictReader(io.StringIO(text)))
+
+
+def column_values(path: Path, column: str, quantity: str, unit: str) -> list[float]:
+    values = []
+    for row in read_rows(path):
+        cell = row.get(column, "") or ""
+        numbers = parse_percentages(cell) if "%" in cell else parse_numbers(cell)
+        for v in numbers:
+            if quantity == "o2":
+                v = v * 100.0 if unit == "fraction" else v
+            else:
+                v = to_psia(v, unit)
+            lo, hi = PLAUSIBLE[quantity]
+            if lo <= v <= hi:
+                values.append(v)
+    return values
+
+
+def extract_all(tables: Path = TABLES) -> dict:
+    found: dict[str, dict[str, list]] = {acc: {"o2": [], "pressure": []} for acc in ALL_RECORDS}
+    for acc, fname, quantity, column, unit in COLUMNS:
+        path = tables / fname
+        if not path.exists():
+            continue
+        vals = column_values(path, column, quantity, unit)
+        if vals:
+            found[acc][quantity].append((fname, column, vals))
+
+    out = {}
+    for acc, q in found.items():
+        out[acc] = {
+            "o2_pct": summarize(q["o2"]),
+            "pressure_psia": summarize(q["pressure"]),
+        }
+    return out
+
+
+def summarize(parts: list) -> dict | None:
+    if not parts:
+        return None
+    vals = [v for _, _, vs in parts for v in vs]
+    return {
+        "min": round(min(vals), 2),
+        "max": round(max(vals), 2),
+        "n_values": len(vals),
+        "source_file": "; ".join(sorted({f for f, _, _ in parts})),
+        "source_column": "; ".join(sorted({c.strip() for _, c, _ in parts})),
+    }
+
+
+if __name__ == "__main__":
+    result = extract_all()
+    OUT.parent.mkdir(parents=True, exist_ok=True)
+    OUT.write_text(json.dumps(result, indent=2) + "\n")
+    for acc, r in result.items():
+        print(acc, r["o2_pct"] and (r["o2_pct"]["min"], r["o2_pct"]["max"]),
+              r["pressure_psia"] and (r["pressure_psia"]["min"], r["pressure_psia"]["max"]))

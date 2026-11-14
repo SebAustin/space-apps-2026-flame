@@ -11,13 +11,13 @@ const FIELDS = [
 describe("PSI investigation metadata", () => {
   it("covers 25 records, each with a PSI accession", () => {
     expect(records).toHaveLength(25);
-    for (const r of records as Record<string, Sourced | null>[]) {
+    for (const r of records as unknown as Record<string, Sourced | null>[]) {
       expect(r.psi_accession?.value).toMatch(/^PSI-\d+$/);
     }
   });
 
   it("gives every filled field a source URL and a verbatim quote", () => {
-    for (const r of records as Record<string, Sourced | null>[]) {
+    for (const r of records as unknown as Record<string, Sourced | null>[]) {
       for (const f of FIELDS) {
         const v = r[f];
         if (v === null || v === undefined) continue;

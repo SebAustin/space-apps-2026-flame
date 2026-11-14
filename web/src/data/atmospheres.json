@@ -1,0 +1,156 @@
+{
+  "PSI-26": {
+    "o2_pct": null,
+    "pressure_psia": null
+  },
+  "PSI-25": {
+    "o2_pct": {
+      "min": 13.6,
+      "max": 22.2,
+      "n_values": 129,
+      "source_file": "PSI-25_Experimental table_BASS-II.csv",
+      "source_column": "Calibrated  initial O2 % by vol"
+    },
+    "pressure_psia": null
+  },
+  "PSI-98": {
+    "o2_pct": {
+      "min": 21.5,
+      "max": 21.7,
+      "n_values": 3,
+      "source_file": "PSI-98_Experimental table_SAFFIRE-1.csv",
+      "source_column": "Percent O2"
+    },
+    "pressure_psia": null
+  },
+  "PSI-99": {
+    "o2_pct": {
+      "min": 21.5,
+      "max": 22.1,
+      "n_values": 11,
+      "source_file": "PSI-99_Experimental table_SAFFIRE-2.csv",
+      "source_column": "Percent O2 (Note 1)"
+    },
+    "pressure_psia": null
+  },
+  "PSI-100": {
+    "o2_pct": null,
+    "pressure_psia": null
+  },
+  "PSI-102": {
+    "o2_pct": null,
+    "pressure_psia": null
+  },
+  "PSI-101": {
+    "o2_pct": null,
+    "pressure_psia": null
+  },
+  "PSI-47": {
+    "o2_pct": null,
+    "pressure_psia": null
+  },
+  "PSI-69": {
+    "o2_pct": {
+      "min": 12.0,
+      "max": 34.0,
+      "n_values": 274,
+      "source_file": "PSI-69_Experimental table_FLEX.csv",
+      "source_column": "O initial ambient composition; mole fraction"
+    },
+    "pressure_psia": {
+      "min": 10.18,
+      "max": 44.86,
+      "n_values": 273,
+      "source_file": "PSI-69_Experimental table_FLEX.csv",
+      "source_column": "Ambient pressure; mmHg"
+    }
+  },
+  "PSI-68": {
+    "o2_pct": {
+      "min": 17.0,
+      "max": 30.0,
+      "n_values": 32,
+      "source_file": "PSI-68_Experimental table_Flex2.csv",
+      "source_column": "Oxygen Mole Fraction"
+    },
+    "pressure_psia": {
+      "min": 7.35,
+      "max": 44.09,
+      "n_values": 40,
+      "source_file": "PSI-68_Experimental table_Flex2.csv",
+      "source_column": "Ambient Pressure (atm)"
+    }
+  },
+  "PSI-39": {
+    "o2_pct": null,
+    "pressure_psia": null
+  },
+  "PSI-23": {
+    "o2_pct": {
+      "min": 21.0,
+      "max": 30.0,
+      "n_values": 23,
+      "source_file": "PSI-23_Experimental table_ACME s-Flame.csv",
+      "source_column": "Atmosphere*"
+    },
+    "pressure_psia": null
+  },
+  "PSI-10": {
+    "o2_pct": {
+      "min": 19.8,
+      "max": 40.0,
+      "n_values": 207,
+      "source_file": "PSI-10_Experimental table_Flame Design_Normal Flame.csv",
+      "source_column": "XO2 (init)"
+    },
+    "pressure_psia": {
+      "min": 6.26,
+      "max": 44.35,
+      "n_values": 307,
+      "source_file": "PSI-10_Experimental table_Flame Design_Inverse Flame.csv; PSI-10_Experimental table_Flame Design_Normal Flame.csv",
+      "source_column": "pmean (atm)"
+    }
+  },
+  "PSI-20": {
+    "o2_pct": {
+      "min": 21.0,
+      "max": 40.0,
+      "n_values": 41,
+      "source_file": "PSI-20_Experimental table_ACME BRE.csv",
+      "source_column": "Oxygen Conc (percent)"
+    },
+    "pressure_psia": null
+  },
+  "PSI-22": {
+    "o2_pct": null,
+    "pressure_psia": null
+  },
+  "PSI-21": {
+    "o2_pct": null,
+    "pressure_psia": null
+  },
+  "PSI-159": {
+    "o2_pct": {
+      "min": 17.97,
+      "max": 39.97,
+      "n_values": 179,
+      "source_file": "PSI-159_Experimental table_CFI-G_Normal Flames.csv",
+      "source_column": "XO2 before test"
+    },
+    "pressure_psia": {
+      "min": 7.18,
+      "max": 48.01,
+      "n_values": 333,
+      "source_file": "PSI-159_Experimental table_CFI-G_Inverse Flames.csv; PSI-159_Experimental table_CFI-G_Normal Flames.csv",
+      "source_column": "approx p (bar)"
+    }
+  },
+  "PSI-107": {
+    "o2_pct": null,
+    "pressure_psia": null
+  },
+  "PSI-106": {
+    "o2_pct": null,
+    "pressure_psia": null
+  }
+}
