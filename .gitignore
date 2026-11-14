@@ -3,3 +3,4 @@ data/raw/
 .env*
 node_modules/
 .venv/
+demo/
