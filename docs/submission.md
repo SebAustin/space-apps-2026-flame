@@ -12,7 +12,7 @@ Aerospace engineers designing a spacecraft, station, Moon base or pressurized ro
 
 ## Demo link
 
-[link to the 30-second video, opens without login]
+https://web-neon-zeta-66.vercel.app/demo.mp4
 
 ## Final Project link
 
